@@ -1,47 +1,11 @@
-<html>
-    <head>
-        <style>
-          body{
-            background-image: assets/images/bgimage;
-          }
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-      position: -webkit-sticky; /* Safari */
-      position: sticky;
-      top: 0;
-    }
-    li {
-      float: left;
-    }
-    
-    li a {
-      display: block;
-      color:lightcoral;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    
-    li a:hover {
-      background-color: grey;
-    }
-    .active {
-      background-color: #4CAF50;
-    }
-    .header{
-      background-color:white;
-    }
-    </style>
-    </head>
-    <body>
 
-        <div class="header">
+     <body>
+
+        <div class="header" style="height:100px">
      
-            <h2 text-align="center">Buyer LandingPage</h2>
+          <marquee>
+            <h1 style="font-size:75px;">Buyer Landing Page</h1>
+         </marquee>
      </div>
         <ul>
             <li><a [routerLink]="['/home']">Buy Product</a> </li>
@@ -52,5 +16,4 @@
             <li style="float:right"><a class="active"  [routerLink]="['/home/login']" >Login</a></li>
           </ul>
     </body>
-    </html>
     <router-outlet></router-outlet>

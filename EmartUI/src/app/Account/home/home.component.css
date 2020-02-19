@@ -1,35 +1,106 @@
-body{
-    background-image: "src\assets\images\bgimage.jpg";
-  }
-  ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+/* body{
+    background-image: url("E:\FINAL-PROJECT-NAVYA-845063\EmartUI\src\assets\images\bgimage.jpg");
+  } */
+  * {box-sizing: border-box;}
+
+
+
+.a{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.topnav {
   overflow: hidden;
-  background-color: #333;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  }
-  li {
+  background-color:#261f16;
+  /*background-color: #e9e9e9;*/
+}
+
+.topnav a {
   float: left;
-  }
-  
-  li a {
   display: block;
-  color:lightcoral;
+  color: #FF9B00;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 25px;
+}
+
+.topnav a:hover {
+  background-color: #fc9e23;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:gray;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+#l
+{
+    float: right;
+}
+
+/* carousel */
+/* #carousel-example-generic {
+  height: 480px;
+  width: 848px;
+} */
+
+/* .carouselTitle {
+  font-size: 64px;
+  font-weight: 100;
+  color: white;
+  text-shadow: 0 1px 2px #000;
+  position: absolute;
+  bottom: 60px;
+  left: 80px;
+} */
+  .header{
+  background-color:cyan;
   }
   
-  li a:hover {
-  background-color: grey;
-  }
-  .active {
-  background-color: #4CAF50;
-  }
-  .header{
-  background-color:white;
-  }
+  
   

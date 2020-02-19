@@ -1,0 +1,14 @@
+.container{
+    background-color: plum;
+   }
+   #bg{
+    background-image: url("src\assets\images\cart.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    height:800px;
+   }
+   .register
+   {
+       font-size:35px;
+   }

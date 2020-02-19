@@ -1,11 +1,27 @@
-<div class="header">
+
+
+    <div class="header" style="height:125px">
+     
+          <marquee>
+              <h1 style="font-size:75px;">WELCOME TO E-MART</h1>
+           </marquee>
+        </div>
+    
+        <div class="topnav">
+            <a href="#home"><img src="assets/images/logo.png" alt="Smiley face" height="60px" width="120px"></a>
+            <a href="#"><i class="fa fa-fw fa-user mt-10"></i>about us</a>
+            <a href="#"><i class="fa fa-fw fa-phone mt-5"></i>Contact</a>
+            <!-- <a href="#"><span class="glyphicon glyphicon-sunglasses"></span>viewcart</a>
+            <a href="#"><span class="glyphicon glyphicon-time"></span>PurchaseHistory</a>
+            <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>BuyProduct</a>
+             <a href="#" id="l" ><i class="fa fa-fw fa-user"></i>logout</a> -->
+            <a href="#" id="l" ><img src="assets/images/login.png " height="50px" width="120px" class="mt-3"></a> 
+           
+          </div>
+
+
   
-    <h2 text-align="center">WELCOME TO E-MART</h2>
-</div>
-<ul>
-   <li><a [routerLink]="['/home']">Home</a> </li>
-    <li><a [routerLink]="['/home']">About </a></li>
-    <li><a [routerLink]="['/home']">Contact Us</a> </li>
-    <li style="float:right"><a class="active"  [routerLink]="['/home/login']" >Login</a></li>
- </ul>
+  
+
+
 <router-outlet></router-outlet>

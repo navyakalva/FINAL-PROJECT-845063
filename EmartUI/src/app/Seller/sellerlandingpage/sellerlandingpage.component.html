@@ -1,1 +1,23 @@
-<p>sellerlandingpage works!</p>
+
+<body>
+
+    <div class="header" style="height:125px">
+ 
+      <marquee>
+        <h1 style="font-size:75px;">Seller Landing Page</h1>
+     </marquee>
+  </div>
+    <ul>
+        <li><a [routerLink]="['/Sellerlandingpage/Additems']">Add Items</a> </li>
+        <li><a [routerLink]="['/Sellerlandingpage/Viewitems']">View Items </a></li>
+        <li><a [routerLink]="['/Sellerlandingpage/']">View Profile</a> </li>
+        <li><a [routerLink]="['/Sellerlandingpage/']">View Reports</a> </li>
+        <li><a [routerLink]="['/Sellerlandingpage/']">ViewProfile</a> </li>
+        <li style="float:right"><a class="active"  [routerLink]="['/home/login']" >Login</a></li>
+      </ul>
+</body>
+<div style="background-image: url(assets/images/bgimage.jpg);">
+
+
+</div>
+<router-outlet></router-outlet>

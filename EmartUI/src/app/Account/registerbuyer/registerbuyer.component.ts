@@ -11,7 +11,6 @@ export class RegisterbuyerComponent implements OnInit {
   id:string;
   name:string;
   createddatetime:Date;
-  
   mobile:number;
   mail:string;
   password:string;

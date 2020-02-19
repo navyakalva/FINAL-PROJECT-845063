@@ -1,26 +1,40 @@
-<div class="jumborton">
-    <div class="container">
+<body id="bg">
+<!-- <div class="bg"> -->
+<br><br>
+    <div class="container card col-md-4"><br>
       <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
-        <div class="form-group">
+        <div class="form-group col-6">
             <label>UserName</label>
             <input type="text" formControlName="uname" class="form-control" [ngClass]="{ 'is-invalid': submit && f.uname.errors }" />
             <div *ngIf="submit && f.uname.errors" class="invalid-feedback">
                 <div *ngIf="f.uname.errors.required">User Name is required</div>
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group col-6">
             <label>Password</label>
             <input type="password" formControlName="pwd" class="form-control" [ngClass]="{ 'is-invalid': submit && f.pwd.errors }" />
             <div *ngIf="submit && f.pwd.errors" class="invalid-feedback">
                 <div *ngIf="f.pwd.errors.required">Password is required</div>
             </div>
         </div>
+        <br>
         <div class="text-center">
             <button class="btn btn-primary mr-1">Login</button>
             <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
         </div>
+        <br><br>
+        <div class="register">
+          
+            <a [routerLink]="['/home/Registerbuyer']">Register Buyer</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a [routerLink]="['/home/Registerseller']">Register Seller</a> 
+           
+        </div>
+
         
       </form>
     </div>
-</div>
-<router-outlet></router-outlet> 
+<!-- </div> -->
+</body>
+
+
+
