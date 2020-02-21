@@ -1,6 +1,10 @@
 .container
 {
-    background-image: 'assets/images/bgimage.jpg';
+    background-color: cyan;
+}
+#cen
+{
+  float:center;
 }
 /* .form-group{
     width:70%;
@@ -13,3 +17,4 @@
     padding-left: 400px;
     text-align:left;
   } */
+  

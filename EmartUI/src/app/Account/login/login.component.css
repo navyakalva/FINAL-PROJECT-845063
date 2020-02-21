@@ -1,14 +1,16 @@
 .container{
-    background-color: plum;
+    background-color: cyan;
    }
-   #bg{
-    background-image: url("src\assets\images\cart.jpg");
+    #bg{
+    background-image: url("src\assets\images\log.jpg");
     background-repeat:no-repeat;
-    background-size:cover;
-    background-position:center;
-    height:800px;
-   }
+    background-size:100% 100%;
+    background-attachment: fixed;
+     background-position:center;
+    height:800px; 
+   } 
    .register
    {
+       
        font-size:35px;
    }

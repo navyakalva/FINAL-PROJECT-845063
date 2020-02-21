@@ -1,17 +1,17 @@
-<body id="bg">
+ <body id="bg"> 
 <!-- <div class="bg"> -->
 <br><br>
     <div class="container card col-md-4"><br>
       <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
         <div class="form-group col-6">
-            <label>UserName</label>
+            <label style="font-size:25px">UserName</label>
             <input type="text" formControlName="uname" class="form-control" [ngClass]="{ 'is-invalid': submit && f.uname.errors }" />
             <div *ngIf="submit && f.uname.errors" class="invalid-feedback">
                 <div *ngIf="f.uname.errors.required">User Name is required</div>
             </div>
         </div>
         <div class="form-group col-6">
-            <label>Password</label>
+            <label style="font-size:25px">Password</label>
             <input type="password" formControlName="pwd" class="form-control" [ngClass]="{ 'is-invalid': submit && f.pwd.errors }" />
             <div *ngIf="submit && f.pwd.errors" class="invalid-feedback">
                 <div *ngIf="f.pwd.errors.required">Password is required</div>
@@ -34,7 +34,7 @@
       </form>
     </div>
 <!-- </div> -->
-</body>
+ </body> 
 
 
 

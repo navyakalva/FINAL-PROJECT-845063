@@ -1,36 +1,21 @@
- 
-     body{
-            background-image: assets/images/bgimage;
-          }
-          
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-      position: -webkit-sticky; /* Safari */
-      position: sticky;
-      top: 0;
-    }
-    li {
-      float: left;
-    }
-    
-    li a {
-      display: block;
-      color:lightcoral;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    
-    li a:hover {
-      background-color: grey;
-    }
-    .active {
-     
-    }
-    .header{
-      background-color:cyan;
-    }
+.navbar a{
+  color:white;
+  height:75px;
+  text-align:center;
+  font-size: 30px;
+}
+.navbar a:hover{
+  color:orange;
+}
+.heading{
+  background-color:cyan;
+}
+.bg{
+  background-image: url("src/assets/images/buyer.jpg");
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  background-position:relative;
+  background-attachment: fixed;
+  height:900px;
+  overflow-y: hidden;
+ }
