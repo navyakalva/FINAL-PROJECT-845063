@@ -19,15 +19,15 @@ export class RegisterbuyerComponent implements OnInit {
   ngOnInit()
    {
     this.buyerregisterform=this.formbuilder.group({
-      id:['',[Validators.required,Validators.pattern("^[E][0-9]{4}$")]],
-      name:['',[Validators.required,Validators.pattern("^[A-Z]{5,10}$")]],
+      id:['',Validators.required,Validators],
+      name:['',[Validators.required,Validators.pattern('^[A-Z a-z]{3,10}$')]],
       createddatetime:['',Validators.required],
       
       mobile:['',[Validators.required,
-              Validators.pattern("^[6-9][0-9]{9}$")]],
+              Validators.pattern('^[6-9][0-9]{9}$')]],
       mail:['',[Validators.required,Validators.email]],
       password:['',[Validators.required,Validators.pattern("^[A-Z]{7}[@,#,$,%,&,*]$")]],
-    })
+    });
   }
   get f(){return this.buyerregisterform.controls;}
   onSubmit()
@@ -42,5 +42,6 @@ export class RegisterbuyerComponent implements OnInit {
     }
 
   }
+  
 
 }

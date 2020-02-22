@@ -1,1 +1,46 @@
-<p>adminlandingpage works!</p>
+
+<div class="bg">
+    <header>
+    
+       <div class="heading" style="height:125px">
+       
+             <marquee>
+                <h1 style="font-size:75px;">Admin Landing Page </h1>
+             </marquee>
+        </div>
+        <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+  
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                      <li class="nav-item">
+                           <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" >Home</a>
+                       </li>
+                      <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/Adminlandingpage/Addcategory']">Add Category</a>
+                     </li>
+                      <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/Adminlandingpage/Addsubcategory']">Add SubCategory</a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link" [routerLink]="['/Adminlandingpage/blockunblockbuyer']">Block/Unblock</a>
+                   </li>
+                      <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/Adminlandingpage/dailyreports']" routerLinkActive="router-link-active" >DailyReports</a>
+                      </li>
+                      <!-- <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/Buyerlandingpage/Viewcart']" routerLinkActive="router-link-active" >View Cart</a>
+                      </li> -->
+                 </ul>
+                   <form class="form-inline my-2 my-lg-0">
+                         <input class="form-control input-lg" type="search" id="inputlg" placeholder="Search" aria-label="Search">
+                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="font-size:20px">Search</button>
+                    </form>
+           </div>
+        </nav> 
+      </header>
+          
+      <router-outlet></router-outlet>
+  </div>

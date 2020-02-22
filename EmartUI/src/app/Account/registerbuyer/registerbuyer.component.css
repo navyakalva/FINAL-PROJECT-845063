@@ -6,6 +6,15 @@
 {
   float:center;
 }
+.bg{
+  background-image: url("src/assets/images/home.jpg");
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  background-position:relative;
+  background-attachment: fixed;
+  height:auto;
+  overflow-y: hidden;
+ }
 /* .form-group{
     width:70%;
    padding-left: 300px;

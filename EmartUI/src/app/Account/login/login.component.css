@@ -1,12 +1,12 @@
 .container{
     background-color: cyan;
    }
-    #bg{
+    .bg{
     background-image: url("src\assets\images\log.jpg");
     background-repeat:no-repeat;
     background-size:100% 100%;
     background-attachment: fixed;
-     background-position:center;
+    background-position:center;
     height:800px; 
    } 
    .register
@@ -14,3 +14,4 @@
        
        font-size:35px;
    }
+  
