@@ -28,7 +28,7 @@ namespace Emart.AccountService.Controllers
             }
             catch (Exception e)
             {
-                return Ok(e.InnerException.Message);
+                return Ok(e.Message);
             }
         }
         [HttpGet]

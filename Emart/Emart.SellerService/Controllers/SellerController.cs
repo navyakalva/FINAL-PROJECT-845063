@@ -28,7 +28,7 @@ namespace Emart.SellerService.Controllers
             }
             catch (Exception e)
             {
-                return Ok(e.InnerException.Message);
+                return Ok(e.Message);
             }
         }
         [HttpPut]

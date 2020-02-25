@@ -1,6 +1,6 @@
 .navbar a{
   color:white;
-  height:75px;
+  /* height:75px; */
   text-align:center;
   font-size: 30px;
 }
@@ -8,7 +8,7 @@
   color:orange;
 }
 .heading{
-  background-color:cyan;
+  background-color:beige;
 }
 .bg{
   background-image: url("src/assets/images/buyer.jpg");

@@ -50,7 +50,10 @@ namespace Emart.SellerService.Models
                     .HasMaxLength(20)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Mobileno).HasColumnName("mobileno");
+                entity.Property(e => e.Mobileno)
+                    .HasColumnName("mobileno")
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Password)
                     .IsRequired()
@@ -226,7 +229,10 @@ namespace Emart.SellerService.Models
                     .HasMaxLength(20)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Contactno).HasColumnName("contactno");
+                entity.Property(e => e.Contactno)
+                    .HasColumnName("contactno")
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Emailid)
                     .IsRequired()

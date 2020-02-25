@@ -1,1 +1,38 @@
-<p>addcategory works!</p>
+<div class="bg">
+    <div id="cen">
+    <div class="container card col-md-4">
+        <div class="card-body">
+            <form [formGroup]="addcategoryform" (ngSubmit)="onSubmit()">
+                <div class="form-group ">
+                        <label style="font-size:25px">Category ID</label>
+                        <input type="text" formControlName="category_id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.category_id.errors }">
+                           <div *ngIf="submitted && f.category_id.errors" class="invalid-feedback">
+                            <div *ngIf="f.category_id.errors.required">ID is required</div>
+                        </div>
+               </div>
+                <div class="form-group ">
+                        <label style="font-size:25px">Category Name</label>
+                        <input type="text" formControlName="category_name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.category_name.errors }" />
+                        <div *ngIf="submitted && f.category_name.errors" class="invalid-feedback">
+                            <div *ngIf="f.category_name.errors.required">Name is required</div>
+                            
+                        </div>
+                 </div>
+                <div class="form-group ">
+                        <label style="font-size:25px">Brief Details</label>
+                        <input type="text" formControlName="brief_details" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.brief_details.errors }" />
+                        <div *ngIf="submitted && f.brief_details.errors" class="invalid-feedback">
+                            <div *ngIf="f.brief_details.errors.required">Brief Details is required</div>
+                        </div>
+                </div>
+                
+              
+                <div class="text-center">
+                    <button class="btn btn-primary mr-1">Submit</button>
+              </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
+    

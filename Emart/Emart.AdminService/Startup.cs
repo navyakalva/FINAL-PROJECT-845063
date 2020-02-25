@@ -28,6 +28,15 @@ namespace Emart.AdminService
         {
             services.AddDbContext<EmartDBContext>();
             services.AddTransient<IAdminRepository, AdminRepository>();
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options =>
+                 options.AllowAnyOrigin()
+                         .AllowAnyMethod()
+                         .AllowAnyHeader()
+                        );
+            });
+            services.AddControllers();
             services.AddControllers();
         }
 
@@ -42,6 +51,7 @@ namespace Emart.AdminService
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseCors("AllowOrigin");
 
             app.UseEndpoints(endpoints =>
             {

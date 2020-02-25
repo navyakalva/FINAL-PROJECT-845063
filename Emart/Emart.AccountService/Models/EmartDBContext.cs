@@ -50,7 +50,10 @@ namespace Emart.AccountService.Models
                     .HasMaxLength(20)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Mobileno).HasColumnName("mobileno");
+                entity.Property(e => e.Mobileno)
+                    .HasColumnName("mobileno")
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Password)
                     .IsRequired()
@@ -139,6 +142,8 @@ namespace Emart.AccountService.Models
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
+                entity.Property(e => e.SellerId).HasColumnName("seller_id");
+
                 entity.Property(e => e.StockNumber).HasColumnName("stock_number");
 
                 entity.Property(e => e.SubcategoryId).HasColumnName("subcategory_id");
@@ -147,6 +152,11 @@ namespace Emart.AccountService.Models
                     .WithMany(p => p.Items)
                     .HasForeignKey(d => d.CategoryId)
                     .HasConstraintName("FK__Items__category___1920BF5C");
+
+                entity.HasOne(d => d.Seller)
+                    .WithMany(p => p.Items)
+                    .HasForeignKey(d => d.SellerId)
+                    .HasConstraintName("FK__Items__seller_id__34C8D9D1");
 
                 entity.HasOne(d => d.Subcategory)
                     .WithMany(p => p.Items)
@@ -219,7 +229,10 @@ namespace Emart.AccountService.Models
                     .HasMaxLength(20)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Contactno).HasColumnName("contactno");
+                entity.Property(e => e.Contactno)
+                    .HasColumnName("contactno")
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Emailid)
                     .IsRequired()
