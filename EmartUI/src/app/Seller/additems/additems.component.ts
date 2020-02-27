@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,Validators,FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Items } from 'src/app/Models/items';
+import { ItemService } from '../item.service';
 
 @Component({
   selector: 'app-additems',
@@ -10,35 +12,28 @@ import { Router } from '@angular/router';
 export class AdditemsComponent implements OnInit {
   additemform:FormGroup;
   submitted=false;
-  iid:number;
-category_id:number;
-subcategory_id:number;
-price:number;
-item_name:number;
-description:string;
-stock_number:number;
-remarks:string;
-  constructor(private formbuilder:FormBuilder,private route:Router) { }
+  list1:Items[];
+  item:Items;
+  constructor(private formbuilder:FormBuilder,private service:ItemService) { }
 
   ngOnInit() {
     this.additemform=this.formbuilder.group({
-      iid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
-      category_id:['',[Validators.required,Validators.pattern("^[0-9]$")]],
-      subcategory_id:['',[Validators.required,Validators.pattern("^[0-9]$")]],
-      price:['',[Validators.required,Validators.pattern("^[0-9]$")]],
-      stock_number:['',[Validators.required,Validators.pattern("^[0-9]$")]],
-
-      item_name:['',[Validators.required,Validators.pattern("^[A-Z]{5,10}$")]],
-      
+      id:['',[Validators.required,Validators.pattern("^[0-9]$")]],
+      price:['',Validators.required],
+      itemname:['',Validators.required],
       description:['',Validators.required],
+      stocknumber:['',Validators.required],
       remarks:['',Validators.required],
-     
-    })
+      categoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
+      subcategoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
+      sellerid:['',Validators.required],
+      })
   }
   get f(){return this.additemform.controls;}
   onSubmit()
   {
     this.submitted= true;
+    this.Add();
     //display form value on success
     if(this.additemform.valid)
     {
@@ -46,5 +41,28 @@ remarks:string;
       console.log(JSON.stringify(this.additemform.value));
       
     }
+  }
+  onReset() {
+    this.submitted = false;
+    this.additemform.reset();
+  }
+  Add()
+  {
+     this.item=new Items();
+     this.item.id=Number(this.additemform.value["id"]);
+     this.item.itemname=this.additemform.value["itemname"];
+     this.item.description=this.additemform.value["description"];
+     this.item.price=Number(this.additemform.value["price"]);
+     this.item.stocknumber=Number(this.additemform.value["stocknumber"]);
+     this.item.remarks=this.additemform.value["remarks"];
+     this.item.categoryid=Number(this.additemform.value["categoryid"]);
+     this.item.subcategoryid=Number(this.additemform.value["subcategoryid"]);
+     this.item.sellerid=Number(this.additemform.value["sellerid"]);
+
+     this.service.AddingItem(this.item).subscribe(res=>{
+       console.log('Record Added')
+     },err=>{
+       console.log(err)
+     })
   }
 }

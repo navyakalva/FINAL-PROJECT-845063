@@ -5,6 +5,5 @@
     background-position:relative;
     background-attachment: fixed;
     height:800px;
-   
+    overflow-y: hidden;
    }
-   

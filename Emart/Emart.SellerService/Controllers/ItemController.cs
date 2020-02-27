@@ -45,6 +45,19 @@ namespace Emart.SellerService.Controllers
                 return Ok(e.InnerException.Message);
             }
         }
+        [HttpGet]
+        [Route("GetAllItems")]
+        public IActionResult Get()
+        {
+            try
+            {
+                return Ok(_repo.GetAllItems());
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.InnerException.Message);
+            }
+        }
         [HttpDelete]
         [Route("Delete/{id}")]
         public void DeleteItems(int id)

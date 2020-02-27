@@ -1,40 +1,53 @@
- <div class="bg"> 
-<!-- <div class="bg"> -->
-<br><br>
-    <div class="container card col-md-4"><br>
-      <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
-        <div class="form-group col-6">
-            <label style="font-size:25px">UserName</label>
-            <input type="text" formControlName="uname" class="form-control" [ngClass]="{ 'is-invalid': submit && f.uname.errors }" />
-            <div *ngIf="submit && f.uname.errors" class="invalid-feedback">
-                <div *ngIf="f.uname.errors.required">User Name is required</div>
-            </div>
-        </div>
-        <div class="form-group col-6">
-            <label style="font-size:25px">Password</label>
-            <input type="password" formControlName="pwd" class="form-control" [ngClass]="{ 'is-invalid': submit && f.pwd.errors }" />
-            <div *ngIf="submit && f.pwd.errors" class="invalid-feedback">
-                <div *ngIf="f.pwd.errors.required">Password is required</div>
-            </div>
-        </div>
-        <br>
-        <div class="text-center">
-            <button class="btn btn-primary mr-1">Login</button>
-            <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
-        </div>
-        <br><br>
-        <div class="register">
-          
-            <a [routerLink]="['/home/Registerbuyer']">Register Buyer</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a [routerLink]="['/home/Registerseller']">Register Seller</a> 
-           
-        </div> 
-     
-        
-      </form>
-    </div>
-<!-- </div> -->
-</div> 
-
+<html>
+<head>
+	<title>Login Page</title>
+</head>
+<body>
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Sign In</h3>
+			</div>
+			<div class="card-body">
+				<form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+					      <input type="text" formControlName="uname" placeholder="UserName" class="form-control" [ngClass]="{ 'is-invalid': submit && f.uname.errors }" />
+                          <div *ngIf="submit && f.uname.errors" class="invalid-feedback">
+                                <div *ngIf="f.uname.errors.required">User Name is required</div>
+                        </div>
+		           	</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" formControlName="pwd" placeholder="Password" class="form-control" [ngClass]="{ 'is-invalid': submit && f.pwd.errors }" />
+                        <div *ngIf="submit && f.pwd.errors" class="invalid-feedback">
+                             <div *ngIf="f.pwd.errors.required">Password is required</div>
+                        </div>
+					</div>
+				
+					<div class="form-group">
+						<input type="submit" value="Login" class="btn float-right login_btn">
+					</div><br><br><br>
+						<div class="d-flex justify-content-center links">
+					        <a [routerLink]="['/home/Registerbuyer']"><h4>Register Buyer</h4></a>
+				      </div>
+				<div class="d-flex justify-content-center">
+					<a [routerLink]="['/home/Registerseller']"><h4>Register Seller</h4></a>
+				</div>
+				</form>
+			</div>
+		
+			
+			
+		</div>
+	</div>
+</div>
+</body>
+</html>
 
 

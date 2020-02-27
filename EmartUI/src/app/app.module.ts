@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import{ReactiveFormsModule} from'@angular/forms';
 import{FormsModule} from '@angular/forms';
+import {HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -26,6 +27,12 @@ import { LoginComponent } from './Account/login/login.component';
 import { RegistersellerComponent } from './Account/registerseller/registerseller.component';
 import { RegisterbuyerComponent } from './Account/registerbuyer/registerbuyer.component';
 import { HomeComponent } from './Account/home/home.component';
+import { AccountService } from './Account/account.service';
+import { ViewsellerprofileComponent } from './Seller/viewsellerprofile/viewsellerprofile.component';
+import { SellereditprofileComponent } from './Seller/sellereditprofile/sellereditprofile.component';
+import { BuyereditprofileComponent } from './Buyer/buyereditprofile/buyereditprofile.component';
+
+
 
 @NgModule({
   declarations: [
@@ -49,16 +56,20 @@ import { HomeComponent } from './Account/home/home.component';
     LoginComponent,
     RegistersellerComponent,
     RegisterbuyerComponent,
-    HomeComponent
+    HomeComponent,
+    ViewsellerprofileComponent,
+    SellereditprofileComponent,
+    BuyereditprofileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
 
   ],
-  providers: [],
+  providers: [AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

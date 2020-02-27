@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{FormBuilder,FormGroup,Validators} from '@angular/forms';
+import { Category } from 'src/app/Models/category';
+import { AdminService } from '../admin.service';
 @Component({
   selector: 'app-addcategory',
   templateUrl: './addcategory.component.html',
@@ -8,20 +10,23 @@ import{FormBuilder,FormGroup,Validators} from '@angular/forms';
 export class AddcategoryComponent implements OnInit {
   addcategoryform:FormGroup;
   submitted=false;
-  constructor(private formbuilder:FormBuilder) { }
+  list1:Category[];
+  item:Category;
+  constructor(private formbuilder:FormBuilder,private service:AdminService) { }
 
   ngOnInit() 
   {
     this.addcategoryform=this.formbuilder.group({
-      category_id:['',Validators.required,Validators],
-      category_name:['',Validators.required,Validators],
-      brief_details:['',Validators.required,Validators],
+      categoryid:['',Validators.required],
+      categoryname:['',Validators.required],
+      briefdetails:['',Validators.required],
     })
   }
   get f(){return this.addcategoryform.controls;}
   onSubmit()
   {
     this.submitted= true;
+    this.Add();
     //display form value on success
     if(this.addcategoryform.valid)
     {
@@ -30,6 +35,22 @@ export class AddcategoryComponent implements OnInit {
       
     }
 
+  }
+  onReset() {
+    this.submitted = false;
+    this.addcategoryform.reset();
+  }
+  Add()
+  {
+     this.item=new Category();
+     this.item.categoryid=Number(this.addcategoryform.value["categoryid"]);
+     this.item.categoryname=this.addcategoryform.value["categoryname"];
+     this.item.briefdetails=this.addcategoryform.value["briefdetails"];
+     this.service.AddingCategory(this.item).subscribe(res=>{
+       console.log('Record Added')
+     },err=>{
+       console.log(err)
+     })
   }
 
 }

@@ -1,17 +1,42 @@
+
+
+html,body{
+background-image: url("src/assets/images/image2.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+height:600px;
+font-family: 'Numans', sans-serif;
+}
+
 .container{
-    background-color: cyan;
-   }
-    .bg{
-    background-image: url("src\assets\images\log.jpg");
-    background-repeat:no-repeat;
-    background-size:100% 100%;
-    background-attachment: fixed;
-    background-position:center;
-    height:800px; 
-   } 
-   .register
-   {
-       
-       font-size:35px;
-   }
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 370px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+.card-header h3{
+color: white;
+}
+.input-group-prepend span{
+width: 50px;
+background-color: #FFC312;
+color: black;
+border:0 !important;
+}
+.login_btn{
+color: black;
+background-color: #FFC312;
+width: 100px;
+}
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
   

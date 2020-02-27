@@ -9,7 +9,7 @@
   color:orange;
 }
 .heading{
-  background-color:cyan;
+  background-color:beige;
 }
 .bg{
   background-image: url("src/assets/images/home2.jpg");
@@ -17,7 +17,7 @@
   background-size:cover;
   background-position:relative;
   background-attachment: fixed;
-  height:850px;
+  height:auto;
   overflow-y: hidden;
  }
  .dropdown-menu
@@ -42,7 +42,7 @@
   left: 80px;
 } */
   .header{
-  background-color:cyan;
+  background-color:beige;
   }
   
   

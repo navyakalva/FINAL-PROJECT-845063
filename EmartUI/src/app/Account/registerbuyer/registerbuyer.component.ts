@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import{FormBuilder,FormGroup,Validators} from '@angular/forms';
+import { Validators, FormGroup, FormBuilder } from '@angular/forms';
+import { Buyer } from 'src/app/Models/Buyer';
+import { AccountService } from '../account.service';
 @Component({
   selector: 'app-registerbuyer',
   templateUrl: './registerbuyer.component.html',
@@ -8,31 +10,33 @@ import{FormBuilder,FormGroup,Validators} from '@angular/forms';
 export class RegisterbuyerComponent implements OnInit {
   buyerregisterform:FormGroup;
   submitted=false;
-  id:string;
-  name:string;
-  createddatetime:Date;
-  mobile:number;
-  mail:string;
-  password:string;
-  constructor(private formbuilder:FormBuilder) { }
+ list1:Buyer[];
+  item:Buyer;
+  
+  constructor(private Formbuilder:FormBuilder,private service:AccountService)
+   { 
+    
+      
+   }
 
   ngOnInit()
    {
-    this.buyerregisterform=this.formbuilder.group({
+    this.buyerregisterform=this.Formbuilder.group({
       id:['',Validators.required,Validators],
-      name:['',[Validators.required,Validators.pattern('^[A-Z a-z]{3,10}$')]],
-      createddatetime:['',Validators.required],
-      
-      mobile:['',[Validators.required,
-              Validators.pattern('^[6-9][0-9]{9}$')]],
-      mail:['',[Validators.required,Validators.email]],
-      password:['',[Validators.required,Validators.pattern("^[A-Z]{7}[@,#,$,%,&,*]$")]],
-    });
+      username:['',[Validators.required,Validators.pattern('^[A-Z a-z]{3,10}$')]],
+      password:['',Validators.required],
+      emailid:['',[Validators.required,Validators.email]],
+      mobileno:['',[Validators.required,
+        Validators.pattern('^[6-9][0-9]{9}$')]],
+      createddatetime:['',Validators.required]
+   });
+   
   }
   get f(){return this.buyerregisterform.controls;}
   onSubmit()
   {
     this.submitted= true;
+    this.Add();
     //display form value on success
     if(this.buyerregisterform.valid)
     {
@@ -40,7 +44,26 @@ export class RegisterbuyerComponent implements OnInit {
       console.log(JSON.stringify(this.buyerregisterform.value));
       
     }
-
+   }
+   onReset() {
+    this.submitted = false;
+    this.buyerregisterform.reset();
+  }
+  Add()
+  {
+     this.item=new Buyer();
+     this.item.id=Number(this.buyerregisterform.value["id"]);
+     this.item.username=this.buyerregisterform.value["username"];
+     this.item.password=this.buyerregisterform.value["password"];
+     this.item.emailid=this.buyerregisterform.value["emailid"];
+     this.item.mobileno=this.buyerregisterform.value["mobileno"];
+     this.item.createddatetime=this.buyerregisterform.value["createddatetime"];
+     console.log(this.item);
+     this.service.RegisterBuyer(this.item).subscribe(res=>{
+       console.log('Record Added')
+     },err=>{
+       console.log(err)
+     })
   }
   
 

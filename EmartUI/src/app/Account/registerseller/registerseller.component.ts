@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
+import { Seller } from 'src/app/Models/seller';
+import { AccountService } from '../account.service';
 @Component({
   selector: 'app-registerseller',
   templateUrl: './registerseller.component.html',
@@ -8,21 +10,24 @@ import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 export class RegistersellerComponent implements OnInit {
   sellerform:FormGroup;
   submit=false;
-  constructor(private formbuilder:FormBuilder) { }
+  list1:Seller[];
+  item:Seller;
+  constructor(private formbuilder:FormBuilder,private service:AccountService) { }
 
   ngOnInit() 
   {
     this.sellerform=this.formbuilder.group({
       id:['',Validators.required,Validators],
-      name:['',[Validators.required,Validators.pattern('^[A-Z-a-z]{3,20}$')]],
-      cname:['',[Validators.required,Validators.pattern('^[A-Z-a-z]{3,20}$')]],
-      brief:['',[Validators.required,]],
-      gst:['',[Validators.required,]],
-      address:['',[Validators.required,]],
+      username:['',[Validators.required,Validators.pattern('^[A-Z-a-z]{3,20}$')]],
+      password:['',[Validators.required]],
+      companyname:['',[Validators.required,Validators.pattern('^[A-Z-a-z]{3,20}$')]],
+      GSTIN:['',[Validators.required,]],
+      briefaboutcompany:['',[Validators.required,]],
+      postaladdress:['',[Validators.required,]],
       website:['',[Validators.required,]],
-       mobile:['',[Validators.required,Validators.pattern('^[6-9][0-9]{9}$')]],
-       email:['',[Validators.required,Validators.email]],
-       password:['',[Validators.required]]
+      emailid:['',[Validators.required,Validators.email]],
+      contactno:['',[Validators.required,Validators.pattern('^[6-9][0-9]{9}$')]]
+      
       });
        
   }
@@ -33,6 +38,7 @@ export class RegistersellerComponent implements OnInit {
   onsubmit()
   {
     this.submit=true;
+    this.Add();
     if(this.sellerform.valid)
     {
     alert("form is validated");
@@ -40,10 +46,30 @@ export class RegistersellerComponent implements OnInit {
     console.log(JSON.stringify(this.sellerform.value))
     }
   }
-  onreset()
+  onReset()
   {
       this.submit=false;
       this.sellerform.reset();
+  }
+  Add()
+  {
+     this.item=new Seller();
+     this.item.id=Number(this.sellerform.value["id"]);
+     this.item.username=this.sellerform.value["username"];
+     this.item.password=this.sellerform.value["password"];
+     this.item.emailid=this.sellerform.value["emailid"];
+     this.item.contactno=this.sellerform.value["contactno"];
+     this.item.GSTIN=this.sellerform.value["GSTIN"];
+     this.item.companyname=this.sellerform.value["companyname"];
+     this.item.briefaboutcompany=this.sellerform.value["briefaboutcompany"];
+     this.item.website=this.sellerform.value["website"];
+     this.item.postaladdress=this.sellerform.value["postaladdress"];
+     console.log(this.item);
+     this.service.RegisterSeller(this.item).subscribe(res=>{
+       console.log('Record Added')
+     },err=>{
+       console.log(err)
+     })
   }
 
 

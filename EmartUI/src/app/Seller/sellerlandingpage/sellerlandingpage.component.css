@@ -16,6 +16,6 @@
   background-size:100% 100%;
   background-position:relative;
   background-attachment: fixed;
-  height:900px;
+  height:auto;
   overflow-y: hidden;
  }

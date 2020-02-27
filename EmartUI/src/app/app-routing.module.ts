@@ -14,12 +14,16 @@ import { ViewcartComponent } from './Buyer/viewcart/viewcart.component';
 import { ViewprofileComponent } from './Buyer/viewprofile/viewprofile.component';
 import { SellerlandingpageComponent } from './Seller/sellerlandingpage/sellerlandingpage.component';
 import { AdditemsComponent } from './Seller/additems/additems.component';
+
 import { ViewitemsComponent } from './Seller/viewitems/viewitems.component';
 import { ViewreportsComponent } from './Seller/viewreports/viewreports.component';
 import { RegisterbuyerComponent } from './Account/registerbuyer/registerbuyer.component';
 import { RegistersellerComponent } from './Account/registerseller/registerseller.component';
 import { LoginComponent } from './Account/login/login.component';
 import { HomeComponent } from './Account/home/home.component';
+import { ViewsellerprofileComponent } from './Seller/viewsellerprofile/viewsellerprofile.component';
+import { BuyereditprofileComponent } from './Buyer/buyereditprofile/buyereditprofile.component';
+import { SellereditprofileComponent } from './Seller/sellereditprofile/sellereditprofile.component';
 
 
 const routes: Routes = [
@@ -37,14 +41,16 @@ const routes: Routes = [
     {path:'Purchasehistory',component:PurchasehistoryComponent},
     {path:'Search',component:SearchComponent},
     {path:'Viewcart',component:ViewcartComponent},
-    {path:'Viewprofile',component:ViewprofileComponent}
+    {path:'Viewprofile',component:ViewprofileComponent},
+    {path:'Buyereditprofile',component:BuyereditprofileComponent}
   ]},
   {path:'Sellerlandingpage',component:SellerlandingpageComponent,
   children:[
     {path:'Additems',component:AdditemsComponent},
     {path:'Viewitems',component:ViewitemsComponent},
-    {path:'Viewprofile',component:ViewprofileComponent},
+    {path:'Viewsellerprofile',component:ViewsellerprofileComponent},
     {path:'Viewreports',component:ViewreportsComponent},
+    {path:'Sellereditprofile',component:SellereditprofileComponent}
   ]},
   {path:'home',component:HomeComponent,
   children:[

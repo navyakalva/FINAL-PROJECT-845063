@@ -5,34 +5,35 @@
             <form [formGroup]="addcategoryform" (ngSubmit)="onSubmit()">
                 <div class="form-group ">
                         <label style="font-size:25px">Category ID</label>
-                        <input type="text" formControlName="category_id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.category_id.errors }">
-                           <div *ngIf="submitted && f.category_id.errors" class="invalid-feedback">
-                            <div *ngIf="f.category_id.errors.required">ID is required</div>
+                        <input type="text" formControlName="categoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryid.errors }">
+                           <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
+                            <div *ngIf="f.categoryid.errors.required">ID is required</div>
                         </div>
                </div>
                 <div class="form-group ">
                         <label style="font-size:25px">Category Name</label>
-                        <input type="text" formControlName="category_name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.category_name.errors }" />
-                        <div *ngIf="submitted && f.category_name.errors" class="invalid-feedback">
-                            <div *ngIf="f.category_name.errors.required">Name is required</div>
+                        <input type="text" formControlName="categoryname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryname.errors }" />
+                        <div *ngIf="submitted && f.categoryname.errors" class="invalid-feedback">
+                            <div *ngIf="f.categoryname.errors.required">Name is required</div>
                             
                         </div>
                  </div>
                 <div class="form-group ">
                         <label style="font-size:25px">Brief Details</label>
-                        <input type="text" formControlName="brief_details" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.brief_details.errors }" />
-                        <div *ngIf="submitted && f.brief_details.errors" class="invalid-feedback">
-                            <div *ngIf="f.brief_details.errors.required">Brief Details is required</div>
+                        <input type="text" formControlName="briefdetails" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.briefdetails.errors }" />
+                        <div *ngIf="submitted && f.briefdetails.errors" class="invalid-feedback">
+                            <div *ngIf="f.briefdetails.errors.required">Brief Details is required</div>
                         </div>
                 </div>
                 
               
                 <div class="text-center">
                     <button class="btn btn-primary mr-1">Submit</button>
+                    <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
               </div>
             </form>
         </div>
     </div>
     </div>
-    </div>
+ </div>
     

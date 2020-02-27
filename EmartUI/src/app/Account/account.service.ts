@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders} from '@angular/common/http';
 import {Observable} from "Rxjs";
-import { Item } from '../item';
+import { Buyer } from '../Models/Buyer';
+import { Seller } from '../Models/seller';
 const Requestheaders={headers:new HttpHeaders({
   'Content-Type':'application/json',
 })}
@@ -13,8 +14,12 @@ export class AccountService
   url:string='http://localhost:59595/Account/'
 
   constructor(private http:HttpClient) { }
-  public RegisterBuyer(item:Item):Observable<any>
+  public RegisterBuyer(item:Buyer):Observable<any>
   {
-    return this.http.post(this.url+'AddItem/',JSON.stringify(item),Requestheaders)
+    return this.http.post(this.url+'BuyerRegister/',JSON.stringify(item),Requestheaders)
+  }
+  public RegisterSeller(item:Seller):Observable<any>
+  {
+    return this.http.post(this.url+'SellerRegister/',JSON.stringify(item),Requestheaders)
   }
 }

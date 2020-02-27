@@ -18,6 +18,10 @@ namespace Emart.SellerService.Repositories
             _context.Add(obj);
             _context.SaveChanges();
         }
+        public List<Items> GetAllItems()
+        {
+            return _context.Items.ToList();
+        }
 
         public void DeleteItems(int id)
         {
