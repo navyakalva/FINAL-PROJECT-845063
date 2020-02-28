@@ -42,5 +42,55 @@ namespace Emart.AdminService.Controllers
         {
             return Ok(_repo.GetBySid(subcategory_id));
         }
+        [HttpGet]
+        [Route("GetAllCategories")]
+        public IActionResult Get()
+        {
+            try
+            {
+                return Ok(_repo.GetAllCategories());
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.InnerException.Message);
+            }
+        }
+        [HttpGet]
+        [Route("GetAllSubCategories")]
+        public IActionResult GetSub()
+        {
+            try
+            {
+                return Ok(_repo.GetAllSubCategories());
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.InnerException.Message);
+            }
+        }
+        [HttpDelete]
+        [Route("DeleteCat/{id}")]
+        public void DeleteCat(int id)
+        {
+            _repo.DeleteCat(id);
+        }
+        [HttpPut]
+        [Route("UpdateCat")]
+        public void UpdateCat(Category obj)
+        {
+            _repo.UpdateCat(obj);
+        }
+        [HttpDelete]
+        [Route("DeleteSub/{id}")]
+        public void DeleteSub(int id)
+        {
+            _repo.DeleteSub(id);
+        }
+        [HttpPut]
+        [Route("UpdateSub")]
+        public void UpdateSub(SubCategory obj)
+        {
+            _repo.UpdateSub(obj);
+        }
     }
 }

@@ -26,17 +26,17 @@ export class ViewitemsComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.viewitemform=this.formbuilder.group({
-    //   id:['',[Validators.required,Validators.pattern("^[0-9]$")]],
-    //   price:['',Validators.required],
-    //   itemname:['',Validators.required],
-    //   description:['',Validators.required],
-    //   stocknumber:['',Validators.required],
-    //   remarks:['',Validators.required],
-    //   categoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
-    //   subcategoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
-    //   sellerid:['',Validators.required],
-    //   })
+    this.viewitemform=this.formbuilder.group({
+      id:['',[Validators.required,Validators.pattern("^[0-9]$")]],
+      price:['',Validators.required],
+      itemname:['',Validators.required],
+      description:['',Validators.required],
+      stocknumber:['',Validators.required],
+      remarks:['',Validators.required],
+      categoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
+      subcategoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
+      sellerid:['',Validators.required],
+      })
   }
   get f() { return this.viewitemform.controls; }
 
@@ -69,7 +69,7 @@ export class ViewitemsComponent implements OnInit {
   //     })
   //   })
   // }
-  // Update()
+  //  Update()
   // {
   //   this.item=new Items();
   //   this.item.id=this.viewitemform.value["id"];
@@ -85,15 +85,15 @@ export class ViewitemsComponent implements OnInit {
   //     console.log('Record Updated')
   //   })
   // }
-  // Delete()
-  // {
-  //   let id=this.viewitemform.value["id"];
-  //   this.service.DeleteItem(id).subscribe(res=>{
-  //     console.log('Record Deleted');
-  //   },err=>{
-  //     console.log(err);
-  //   })
-  // }
+  Delete(id:any)
+  {
+    
+    this.service.DeleteItem(id).subscribe(res=>{
+      console.log('Record Deleted');
+    },err=>{
+      console.log(err);
+    })
+  }
 
 
 }

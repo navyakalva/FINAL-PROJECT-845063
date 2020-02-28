@@ -24,6 +24,8 @@ import { HomeComponent } from './Account/home/home.component';
 import { ViewsellerprofileComponent } from './Seller/viewsellerprofile/viewsellerprofile.component';
 import { BuyereditprofileComponent } from './Buyer/buyereditprofile/buyereditprofile.component';
 import { SellereditprofileComponent } from './Seller/sellereditprofile/sellereditprofile.component';
+import { ViewComponent } from './Admin/view/view.component';
+import { EditItemsComponent } from './Seller/edit-items/edit-items.component';
 
 
 const routes: Routes = [
@@ -31,6 +33,7 @@ const routes: Routes = [
   children:[
     {path:'Addcategory',component:AddcategoryComponent},
     {path:'Addsubcategory',component:AddsubcategoryComponent},
+    {path:'View',component:ViewComponent},
     {path:'blockunblockseller',component:BlockunblocksellerComponent},
     {path:'blockunblockbuyer',component:BlockunblockbuyerComponent},
     {path:'dailyreports',component:DailyreportsComponent}
@@ -49,6 +52,7 @@ const routes: Routes = [
     {path:'Additems',component:AdditemsComponent},
     {path:'Viewitems',component:ViewitemsComponent},
     {path:'Viewsellerprofile',component:ViewsellerprofileComponent},
+    {path:'edititems',component:EditItemsComponent},
     {path:'Viewreports',component:ViewreportsComponent},
     {path:'Sellereditprofile',component:SellereditprofileComponent}
   ]},

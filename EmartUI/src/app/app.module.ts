@@ -31,6 +31,8 @@ import { AccountService } from './Account/account.service';
 import { ViewsellerprofileComponent } from './Seller/viewsellerprofile/viewsellerprofile.component';
 import { SellereditprofileComponent } from './Seller/sellereditprofile/sellereditprofile.component';
 import { BuyereditprofileComponent } from './Buyer/buyereditprofile/buyereditprofile.component';
+import { ViewComponent } from './Admin/view/view.component';
+import { EditItemsComponent } from './Seller/edit-items/edit-items.component';
 
 
 
@@ -59,7 +61,9 @@ import { BuyereditprofileComponent } from './Buyer/buyereditprofile/buyereditpro
     HomeComponent,
     ViewsellerprofileComponent,
     SellereditprofileComponent,
-    BuyereditprofileComponent
+    BuyereditprofileComponent,
+    ViewComponent,
+    EditItemsComponent
   ],
   imports: [
     BrowserModule,

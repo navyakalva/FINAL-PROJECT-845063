@@ -1,6 +1,6 @@
 <div class="register" align="center">
-    <h3 align="center">ADD ITEM</h3>
-        <form [formGroup]="additemform" (ngSubmit)="onSubmit()" align="center">
+    <h3 align="center">EDIT ITEMS</h3>
+        <form [formGroup]="edititemform" (ngSubmit)="onSubmit()" align="center">
             <table>
                 <tr>
                     <td><label>Item ID</label></td>
@@ -67,10 +67,11 @@
                 </div></td>
             </tr>
                 <div class="text-center">
-                <button class="btn btn-primary mr-1" type="submit" (click)='onSubmit()'>Add</button>
+                <button class="btn btn-primary mr-1" type="submit" (click)='onSubmit()'>Update</button>
                 <button class="btn btn-primary mr-1" type="reset" (click)='onReset()'>Reset</button>
             </div>
         </table>
         </form>
 </div>
 <router-outlet></router-outlet>
+
