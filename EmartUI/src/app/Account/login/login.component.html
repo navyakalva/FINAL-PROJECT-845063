@@ -4,7 +4,7 @@
 </head>
 <body>
 <div class="container">
-	<div class="d-flex justify-content-center h-100">
+	 <div class="d-flex justify-content-center h-75"><!--h-100 -->
 		<div class="card">
 			<div class="card-header">
 				<h3>Sign In</h3>
@@ -32,7 +32,10 @@
 				
 					<div class="form-group">
 						<input type="submit" value="Login" class="btn float-right login_btn">
-					</div><br><br><br>
+						&nbsp;
+						<button class="btn float-right login_btn" type="reset" (click)="onReset()">Cancel</button>
+					</div><br>
+					<p style="text-align:center;color:White">New User ?</p>
 						<div class="d-flex justify-content-center links">
 					        <a [routerLink]="['/home/Registerbuyer']"><h4>Register Buyer</h4></a>
 				      </div>
@@ -45,7 +48,7 @@
 			
 			
 		</div>
-	</div>
+	 </div>
 </div>
 </body>
 </html>

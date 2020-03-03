@@ -1,14 +1,33 @@
-<div class="register" align="center">
+<div class=register align="center">
     <h3 align="center">ADD ITEM</h3>
+    <div class="container card col-md-4" > 
+    <div class="card-body" >
         <form [formGroup]="additemform" (ngSubmit)="onSubmit()" align="center">
             <table>
-                <tr>
+               <tr>
+                <td><label style="color: whitesmoke;">Choose Category</label></td>
+                <!-- <input type="text" formControlName="categoryId" class="form-control" /> -->
+               <td> <select formControlName="categoryid" class="form-control" (change)="GetSubCategory()">
+                     <option *ngFor="let item of clist" value="{{item.categoryId}}">{{item.categoryName}}</option>   
+                </select></td>
+               </tr>
+               <br>
+               <tr>
+               <td> <label style="color: whitesmoke;">Choose SubCategory</label></td>
+                <!-- <input type="text" formControlName="subcategoryId" class="form-control" /> -->
+                
+                 <td> <select formControlName="subcategoryid" class="form-control">
+                    <option *ngFor="let item of sclist" value="{{item.subcategoryId}}">{{item.subcategoryName}}</option>   
+               </select></td>
+               </tr>
+              
+                <!-- <tr>
                     <td><label>Item ID</label></td>
                     <td><input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
                     <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
                         <div *ngIf="f.id.errors.required"></div>
                     </div></td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td><label>Price</label></td>
                     <td><input type="Number" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
@@ -43,34 +62,36 @@
                     <div *ngIf="f.remarks.errors.required"></div>
                 </div></td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td><label>Category ID</label></td>
                 <td><input type="Number" formControlName="categoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryid.errors }" />
                 <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
                     <div *ngIf="f.categoryid.errors.required"></div>
                     <div *ngIf="f.categoryid.errors.pattern"></div>
                 </div></td>
-            </tr>
-            <tr>
+            </tr> -->
+            <!-- <tr>
                 <td><label>SubCategory ID</label></td>
                 <td><input type="Number" formControlName="subcategoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subcategoryid.errors }" />
                 <div *ngIf="submitted && f.subcategoryid.errors" class="invalid-feedback">
                     <div *ngIf="f.subcategoryid.errors.required"></div>
                     <div *ngIf="f.subcategoryid.errors.pattern"></div>
                 </div></td>
-            </tr>
-            <tr>
+            </tr> -->
+            <!-- <tr>
                 <td><label>Seller ID</label></td>
                 <td><input type="Number" formControlName="sellerid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.sellerid.errors }" />
                 <div *ngIf="submitted && f.sellerid.errors" class="invalid-feedback">
                     <div *ngIf="f.sellerid.errors.required"></div>
                 </div></td>
-            </tr>
+            </tr> -->
                 <div class="text-center">
                 <button class="btn btn-primary mr-1" type="submit" (click)='onSubmit()'>Add</button>
                 <button class="btn btn-primary mr-1" type="reset" (click)='onReset()'>Reset</button>
             </div>
         </table>
         </form>
+    </div>
+    </div>
 </div>
 <router-outlet></router-outlet>

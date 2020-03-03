@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import{FormBuilder,FormGroup,Validators} from '@angular/forms';
 import { Subcategory } from 'src/app/Models/subcategory';
 import { AdminService } from '../admin.service';
+import { Category } from 'src/app/Models/category';
 @Component({
   selector: 'app-addsubcategory',
   templateUrl: './addsubcategory.component.html',
@@ -12,12 +13,21 @@ export class AddsubcategoryComponent implements OnInit {
   submitted=false;
   list1:Subcategory[];
   item:Subcategory;
-  constructor(private formbuilder:FormBuilder,private service:AdminService) { }
+  sub:Subcategory;
+  categorylist:Category[];
+  constructor(private formbuilder:FormBuilder,private service:AdminService) 
+  {
+    this.sub=new Subcategory();
+    this.service.GetAllCategories().subscribe(res=>{
+      this.categorylist=res;
+      console.log(this.categorylist);
+    })
+   }
 
   ngOnInit() 
   {
     this.addsubcategoryform=this.formbuilder.group({
-      subcategoryid:['',Validators.required],
+     
       subcategoryname:['',Validators.required],
       categoryid:['',Validators.required],
       GST:['',Validators.required],
@@ -45,7 +55,7 @@ export class AddsubcategoryComponent implements OnInit {
   Add()
   {
      this.item=new Subcategory();
-     this.item.subcategoryid=Number(this.addsubcategoryform.value["subcategoryid"]);
+     this.item.subcategoryid=Math.round(Math.random()*100);
      this.item.subcategoryname=this.addsubcategoryform.value["subcategoryname"];
      this.item.briefdetails=this.addsubcategoryform.value["briefdetails"];
      this.item.GST=Number(this.addsubcategoryform.value["GST"]);

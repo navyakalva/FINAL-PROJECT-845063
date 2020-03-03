@@ -1,25 +1,26 @@
 
 
 html,body{
-background-image: url("src/assets/images/image2.jpg");
+ background-image: url("src/assets/images/image2.jpg"); 
 background-size: cover;
 background-repeat: no-repeat;
-height:600px;
+height:800px;
 font-family: 'Numans', sans-serif;
 }
 
 .container{
 height: 100%;
 align-content: center;
-}
+} 
 
 .card{
-height: 370px;
+height: 410px;
 margin-top: auto;
 margin-bottom: auto;
 width: 400px;
-background-color: rgba(0,0,0,0.5) !important;
+ background-color: rgba(0,0,0,0.5); 
 }
+
 .card-header h3{
 color: white;
 }
@@ -38,5 +39,6 @@ width: 100px;
 color: black;
 background-color: white;
 }
+
 
   

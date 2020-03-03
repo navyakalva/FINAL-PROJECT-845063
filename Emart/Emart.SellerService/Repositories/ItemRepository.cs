@@ -45,5 +45,14 @@ namespace Emart.SellerService.Repositories
         {
             return _context.Items.Where(e=>e.Id==sid).ToList();
         }
+        public List<Category> GetAllCategories()
+        {
+            return _context.Category.ToList();
+        }
+
+        public List<SubCategory> GetSubCategories(int category_id)
+        {
+            return _context.SubCategory.Where(e => e.CategoryId == category_id).ToList();
+        }
     }
 }

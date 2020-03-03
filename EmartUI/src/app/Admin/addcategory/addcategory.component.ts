@@ -43,7 +43,7 @@ export class AddcategoryComponent implements OnInit {
   Add()
   {
      this.item=new Category();
-     this.item.categoryid=Number(this.addcategoryform.value["categoryid"]);
+     this.item.categoryid=Math.round(Math.random()*100);
      this.item.categoryname=this.addcategoryform.value["categoryname"];
      this.item.briefdetails=this.addcategoryform.value["briefdetails"];
      this.service.AddingCategory(this.item).subscribe(res=>{

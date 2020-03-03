@@ -26,6 +26,7 @@ import { BuyereditprofileComponent } from './Buyer/buyereditprofile/buyereditpro
 import { SellereditprofileComponent } from './Seller/sellereditprofile/sellereditprofile.component';
 import { ViewComponent } from './Admin/view/view.component';
 import { EditItemsComponent } from './Seller/edit-items/edit-items.component';
+import { ViewsubComponent } from './Admin/viewsub/viewsub.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
     {path:'Addcategory',component:AddcategoryComponent},
     {path:'Addsubcategory',component:AddsubcategoryComponent},
     {path:'View',component:ViewComponent},
+    {path:'Viewsub',component:ViewsubComponent},
     {path:'blockunblockseller',component:BlockunblocksellerComponent},
     {path:'blockunblockbuyer',component:BlockunblockbuyerComponent},
     {path:'dailyreports',component:DailyreportsComponent}

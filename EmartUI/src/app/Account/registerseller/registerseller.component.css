@@ -1,6 +1,14 @@
-.container
+/* .container
 {
-    background-color: cyan;
+    background-color: grey;
+} */
+.card
+{
+    background-color: rgba(0,0,0,0.5);
+    width:450px;
+}
+label{
+    color:white;
 }
 .bg{
     background-image: url("src/assets/images/home.jpg");

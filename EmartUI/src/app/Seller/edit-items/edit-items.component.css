@@ -11,7 +11,7 @@ input[type=Number]{
   }
   .button1 {background-color: blue;
     text-decoration-color: white;}
-    .register{
+    /* .register{
         border-radius: 5px;
         background-color:gray;
         padding: 10px;
@@ -20,10 +20,15 @@ input[type=Number]{
         margin: 300px;
         float: center;
         margin-top: 50px ;
-    }
+    } */
     h3{
       color:white;
     }
+    .card
+{
+    background-color: rgba(0,0,0,0.5);
+    width:450px;
+}
     /* .register{
     background-image: url('src/assets/images/additems.jpg');
     background-repeat: no-repeat;

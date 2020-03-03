@@ -3,7 +3,7 @@
   color:white;
   /* height:75px; */
   text-align:center;
-  font-size: 30px;
+  /* font-size: 30px; */
 }
 .navbar a:hover{
   color:orange;
@@ -12,13 +12,13 @@
   background-color:beige;
 }
 .bg{
-  background-image: url("src/assets/images/home2.jpg");
+  background-image: url("src/assets/images/hdimage.png");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:relative;
   background-attachment: fixed;
-  height:auto;
-  overflow-y: hidden;
+  height:950px;
+  
  }
  .dropdown-menu
  {

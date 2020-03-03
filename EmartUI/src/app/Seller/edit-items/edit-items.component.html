@@ -1,14 +1,16 @@
 <div class="register" align="center">
     <h3 align="center">EDIT ITEMS</h3>
+    <div class="container card col-md-4" > 
+        <div class="card-body" >
         <form [formGroup]="edititemform" (ngSubmit)="onSubmit()" align="center">
             <table>
-                <tr>
+                <!-- <tr>
                     <td><label>Item ID</label></td>
                     <td><input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
                     <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
                         <div *ngIf="f.id.errors.required"></div>
                     </div></td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td><label>Price</label></td>
                     <td><input type="Number" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
@@ -43,7 +45,7 @@
                     <div *ngIf="f.remarks.errors.required"></div>
                 </div></td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td><label>Category ID</label></td>
                 <td><input type="Number" formControlName="categoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryid.errors }" />
                 <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
@@ -65,13 +67,15 @@
                 <div *ngIf="submitted && f.sellerid.errors" class="invalid-feedback">
                     <div *ngIf="f.sellerid.errors.required"></div>
                 </div></td>
-            </tr>
+            </tr> -->
                 <div class="text-center">
                 <button class="btn btn-primary mr-1" type="submit" (click)='onSubmit()'>Update</button>
-                <button class="btn btn-primary mr-1" type="reset" (click)='onReset()'>Reset</button>
+                <!-- <button class="btn btn-primary mr-1" type="reset" (click)='onReset()'>Reset</button> -->
             </div>
         </table>
         </form>
+        </div>
+    </div>
 </div>
 <router-outlet></router-outlet>
 

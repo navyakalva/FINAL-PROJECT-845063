@@ -1,8 +1,16 @@
-.container
+/* .container
 {
     background-color: beige;
-}
+} */
 #cen
 {
   float:center;
+}
+.card
+{
+    background-color: rgba(0,0,0,0.5);
+    width:450px;
+}
+label{
+  color:white;
 }

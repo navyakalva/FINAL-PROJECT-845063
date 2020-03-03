@@ -54,7 +54,7 @@ export class RegistersellerComponent implements OnInit {
   Add()
   {
      this.item=new Seller();
-     this.item.id=Number(this.sellerform.value["id"]);
+     this.item.id=Math.round(Math.random()*100);
      this.item.username=this.sellerform.value["username"];
      this.item.password=this.sellerform.value["password"];
      this.item.emailid=this.sellerform.value["emailid"];

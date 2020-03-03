@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 namespace Emart.AccountService.Repositories
-{
+{ 
     public class AccountRepository : IAccountRepository
     {
         private readonly EmartDBContext _context;
@@ -13,15 +13,10 @@ namespace Emart.AccountService.Repositories
         {
             _context = context;
         }
-        public bool BuyerLogin(string uname, string pwd)
+        public Buyer BuyerLogin(string uname, string pwd)
         {
-            var x = _context.Buyer.SingleOrDefault(e => e.Username == uname && e.Password == pwd);
-            if (x != null)
-            {
-                return true;
-            }
-            else
-                return false;
+            return _context.Buyer.SingleOrDefault(e => e.Username == uname && e.Password == pwd);
+            
         }
         public void BuyerRegister(Buyer obj)
         {
@@ -39,15 +34,11 @@ namespace Emart.AccountService.Repositories
 
         }
 
-        public bool SellerLogin(string uname, string pwd)
+        public Seller SellerLogin(string uname, string pwd)
         {
-            var x = _context.Seller.Where(e => e.Username == uname && e.Password == pwd).ToList();
-            if (x.Count != 0)
-            {
-                return true;
-            }
-            else
-                return false;
+            return _context.Seller.SingleOrDefault(e => e.Username == uname && e.Password == pwd);
+            
+            
 
         }
 

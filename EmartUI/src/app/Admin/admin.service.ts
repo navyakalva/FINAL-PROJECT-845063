@@ -26,6 +26,11 @@ export class AdminService
        return this.http.get<Category[]>(this.url+'GetAllCategories')
       
     }
+    public GetAllSub():Observable<Subcategory[]>
+    {
+       return this.http.get<Subcategory[]>(this.url+'GetAllSubCategories')
+      
+    }
     public UpdateCat(item:Category):Observable<any>
     {
       return this.http.put<any>(this.url+'UpdateCat/',JSON.stringify(item),Requestheaders)
@@ -34,6 +39,11 @@ export class AdminService
     {
      return this.http.delete<any>(this.url+'DeleteCat/'+id,Requestheaders)
     }
+    public DeleteSub(id:string):Observable<any>
+    {
+     return this.http.delete<any>(this.url+'DeleteSub/'+id,Requestheaders)
+    }
+   
     // public UpdateSub(item:SubCategory):Observable<any>
     // {
     //   return this.http.put<any>(this.url+'UpdateSub/',JSON.stringify(item),Requestheaders)

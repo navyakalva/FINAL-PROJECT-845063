@@ -3,6 +3,9 @@ import { FormBuilder,Validators,FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Items } from 'src/app/Models/items';
 import { ItemService } from '../item.service';
+import { Category } from 'src/app/Models/category';
+import { Subcategory } from 'src/app/Models/subcategory';
+import { AdminService } from 'src/app/Admin/admin.service';
 
 @Component({
   selector: 'app-additems',
@@ -14,7 +17,17 @@ export class AdditemsComponent implements OnInit {
   submitted=false;
   list1:Items[];
   item:Items;
-  constructor(private formbuilder:FormBuilder,private service:ItemService) { }
+  clist:Category[];
+  sclist:Subcategory[];
+  
+  constructor(private formbuilder:FormBuilder,private service:ItemService,private route:Router) 
+  { 
+    this.service.GetAllCategories().subscribe(res=>{
+      this.clist=res;
+      console.log(this.clist);
+    })
+
+  }
 
   ngOnInit() {
     this.additemform=this.formbuilder.group({
@@ -64,5 +77,14 @@ export class AdditemsComponent implements OnInit {
      },err=>{
        console.log(err)
      })
+  }
+  GetSubCategory()
+  {
+    let cid=this.additemform.value["categoryid"];
+    console.log(cid);
+    this.service. GetSub(cid).subscribe(res=>{
+      this.sclist=res;
+      console.log(this.sclist);
+    })
   }
 }

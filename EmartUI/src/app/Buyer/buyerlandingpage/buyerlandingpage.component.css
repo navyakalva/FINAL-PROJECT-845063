@@ -8,10 +8,10 @@
   color:orange;
 }
 .heading{
-  background-color:cyan;
+  background-color:beige;
 }
 .bg{
-  background-image: url("src/assets/images/buyer2.png");
+  background-image: url("src/assets/images/cart.jpg");
   background-repeat:no-repeat;
   background-size:100% 100%;
   background-position:relative;

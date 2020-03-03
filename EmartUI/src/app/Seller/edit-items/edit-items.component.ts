@@ -18,21 +18,22 @@ export class EditItemsComponent implements OnInit {
   ngOnInit() 
   {
     this.edititemform=this.formbuilder.group({
-      id:['',[Validators.required,Validators.pattern("^[0-9]$")]],
+     // id:['',[Validators.required,Validators.pattern("^[0-9]$")]],
       price:['',Validators.required],
       itemname:['',Validators.required],
       description:['',Validators.required],
       stocknumber:['',Validators.required],
       remarks:['',Validators.required],
-      categoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
-      subcategoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
-      sellerid:['',Validators.required],
+     // categoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
+     // subcategoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
+     // sellerid:['',Validators.required],
       })
   }
   get f(){return this.edititemform.controls;}
   onSubmit()
   {
     this.submitted= true;
+    
     
     //display form value on success
     if(this.edititemform.valid)

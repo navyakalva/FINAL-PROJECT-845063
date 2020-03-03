@@ -52,7 +52,7 @@ export class RegisterbuyerComponent implements OnInit {
   Add()
   {
      this.item=new Buyer();
-     this.item.id=Number(this.buyerregisterform.value["id"]);
+     this.item.id=Math.round(Math.random()*100);
      this.item.username=this.buyerregisterform.value["username"];
      this.item.password=this.buyerregisterform.value["password"];
      this.item.emailid=this.buyerregisterform.value["emailid"];

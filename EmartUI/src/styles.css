@@ -1,3 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
-
+/* body,html{
+    height:100%;
+}
+#bg{
+    background-image: url("src/assets/images/hdimage.png");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    background-position:relative;
+    background-attachment: fixed;
+    height:1000px;
+    overflow-y: hidden;
+   } */

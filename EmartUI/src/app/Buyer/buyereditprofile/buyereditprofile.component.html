@@ -1,17 +1,13 @@
-
-
-<div class="bg">
-    <div id="cen">
-    <div class="container card col-md-4">
+<div class="container card col-md-4">
         <div class="card-body">
             <form [formGroup]="viewform" (ngSubmit)="onSubmit()">
-                <div class="form-group ">
+                <!-- <div class="form-group ">
                         <label style="font-size:25px">ID</label>
                         <input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }">
-                           <!-- <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
-                            <div *ngIf="f.id.errors.required">ID is required</div> -->
+                           <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+                            <div *ngIf="f.id.errors.required">ID is required</div>
                         
-               </div>
+               </div> -->
                 <div class="form-group ">
                         <label style="font-size:25px">User Name</label>
                         <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
@@ -62,5 +58,4 @@
             </form>
         </div>
     </div>
-    </div>
-    </div>
+   

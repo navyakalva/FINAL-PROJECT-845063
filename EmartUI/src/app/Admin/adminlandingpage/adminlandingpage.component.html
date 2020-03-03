@@ -1,5 +1,4 @@
-
-<div class="bg">
+<div class=bg>
     <header>
     
        <div class="heading" style="height:125px">
@@ -25,8 +24,11 @@
                             <a class="nav-link" [routerLink]="['/Adminlandingpage/Addsubcategory']">Add SubCategory</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" [routerLink]="['/Adminlandingpage/View']">View</a>
-                  </li>
+                        <a class="nav-link" [routerLink]="['/Adminlandingpage/View']">View Category</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/Adminlandingpage/Viewsub']">View SubCategory</a>
+                      </li>
                       <li class="nav-item">
                          <a class="nav-link" [routerLink]="['/Adminlandingpage/blockunblockbuyer']">Block/Unblock</a>
                    </li>
@@ -46,4 +48,6 @@
       </header>
           
       <router-outlet></router-outlet>
-  </div>
+</div>
+
+ 

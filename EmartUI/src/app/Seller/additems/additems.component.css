@@ -6,21 +6,27 @@ input[type=Number]{
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
-    box-sizing: border-box;
+     box-sizing: border-box; 
     border-radius: 30px;
+    
   }
+.card
+{
+    background-color: rgba(0,0,0,0.5);
+    width:450px;
+}
   .button1 {background-color: blue;
     text-decoration-color: white;}
-    .register{
-        border-radius: 5px;
+     /* .register{
+         border-radius: 5px; 
         background-color:gray;
-        padding: 10px;
-        width: 30%;
-        box-align:center;
+         padding: 10px; 
+         width: 30%; 
+         box-align:center; 
         margin: 300px;
-        float: center;
-        margin-top: 50px ;
-    }
+       float: center;  
+       margin-top: 50px ;
+    }   */
     h3{
       color:white;
     }
