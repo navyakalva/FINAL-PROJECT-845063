@@ -22,4 +22,13 @@ export class AccountService
   {
     return this.http.post(this.url+'SellerRegister/',JSON.stringify(item),Requestheaders)
   }
+  public BuyerLogin(username:any,password:any):Observable<any>
+  {
+    return this.http.get(this.url+'BuyerLogin/'+username+'/'+password,Requestheaders)
+  }
+  public SellerLogin(username:any,password:any):Observable<any>
+  {
+    return this.http.get(this.url+'SellerLogin/'+username+'/'+password,Requestheaders)
+  }
 }
+

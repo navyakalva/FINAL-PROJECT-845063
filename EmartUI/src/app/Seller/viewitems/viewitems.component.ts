@@ -50,41 +50,25 @@ export class ViewitemsComponent implements OnInit {
       this.submitted = false;
       this.viewitemform.reset();
   }
-  // Search()
-  // {
-  //   let id=this.viewitemform.value["id"];
-  //   this.service.GetById(id).subscribe(res=>{
-  //     this.item=res;
-  //     console.log(this.item);
-  //     this.viewitemform.setValue({
-  //       id:this.item.id,
-  //       itemname:this.item.itemname,
-  //       price:this.item.price,
-  //       stocknumber:this.item.stocknumber,
-  //       description:this.item.description,
-  //       remarks:this.item.remarks,
-  //       categoryid:this.item.categoryid,
-  //       subcategoryid:this.item.subcategoryid,
-
-  //     })
-  //   })
-  // }
-  //  Update()
-  // {
-  //   this.item=new Items();
-  //   this.item.id=this.viewitemform.value["id"];
-  //   this.item.itemname=this.viewitemform.value["name"];
-  //   this.item.price=Number(this.viewitemform.value["price"]);
-  //   this.item.stocknumber=Number(this.viewitemform.value["stock"]);
-  //   this.item.description=this.viewitemform.value["description"];
-  //   this.item.remarks=this.viewitemform.value["remarks"];
-  //   this.item.categoryid=Number(this.viewitemform.value["categoryid"]);
-  //   this.item.subcategoryid=Number(this.viewitemform.value["subcategoryid"]);
-  //   console.log(this.item);
-  //   this.service.UpdateItem(this.item).subscribe(res=>{
-  //     console.log('Record Updated')
-  //   })
-  // }
+  
+   Update()
+  {
+    this.item=new Items();
+    this.item.id=this.viewitemform.value["id"];
+    this.item.categoryid=this.viewitemform.value["categoryid"];
+    this.item.subcategoryid=this.viewitemform.value["subcategoryid"];
+    this.item.price=Number(this.viewitemform.value["price"]);
+    this.item.itemname=this.viewitemform.value["itemname"];
+    this.item.description=this.viewitemform.value["description"];
+    this.item.stocknumber=Number(this.viewitemform.value["stocknumber"]);
+    this.item.remarks=this.viewitemform.value["remarks"];
+    this.item.sellerid=this.viewitemform.value["sellerid"];
+    console.log(this.item);
+    this.service.UpdateItem(this.item).subscribe(res=>
+      {
+        console.log('record updated')
+      })
+  }
   Delete(id:any)
   {
     

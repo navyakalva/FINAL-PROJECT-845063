@@ -62,7 +62,7 @@ export class AdditemsComponent implements OnInit {
   Add()
   {
      this.item=new Items();
-     this.item.id=Number(this.additemform.value["id"]);
+     this.item.id=Math.round(Math.random()*100);
      this.item.itemname=this.additemform.value["itemname"];
      this.item.description=this.additemform.value["description"];
      this.item.price=Number(this.additemform.value["price"]);

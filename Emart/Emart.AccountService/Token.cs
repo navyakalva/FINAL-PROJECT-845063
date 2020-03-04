@@ -9,8 +9,7 @@ namespace Emart.AccountService
     {
         public  int sid { get; set; }
         public int bid{ get; set; }
-        public string token;
-        public string msg;
-        internal string message;
+        public string token { get; set; }
+        public  string message { get; set; }
     }
 }

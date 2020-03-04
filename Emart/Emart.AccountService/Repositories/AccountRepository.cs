@@ -28,11 +28,11 @@ namespace Emart.AccountService.Repositories
 
         
 
-        public Buyer Getbyid(int id)
-        {
-            return _context.Buyer.Find(id);
+        //public Buyer Getbyid(int id)
+        //{
+        //    return _context.Buyer.Find(id);
 
-        }
+        //}
 
         public Seller SellerLogin(string uname, string pwd)
         {

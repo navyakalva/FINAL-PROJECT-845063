@@ -70,9 +70,10 @@ namespace Emart.AccountService
             }
 
             app.UseRouting();
-            app.UseAuthentication();
+           
 
             app.UseAuthorization();
+            app.UseAuthentication();
             app.UseCors("AllowOrigin");
 
             app.UseEndpoints(endpoints =>
