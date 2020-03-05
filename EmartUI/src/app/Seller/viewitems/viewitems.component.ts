@@ -29,13 +29,13 @@ export class ViewitemsComponent implements OnInit {
     this.viewitemform=this.formbuilder.group({
       id:['',[Validators.required,Validators.pattern("^[0-9]$")]],
       price:['',Validators.required],
-      itemname:['',Validators.required],
+      itemName:['',Validators.required],
       description:['',Validators.required],
-      stocknumber:['',Validators.required],
+      stockNumber:['',Validators.required],
       remarks:['',Validators.required],
-      categoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
-      subcategoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
-      sellerid:['',Validators.required],
+      categoryId:['',[Validators.required,Validators.pattern("^[0-9]$")]],
+      subcategoryId:['',[Validators.required,Validators.pattern("^[0-9]$")]],
+      sellerId:['',Validators.required],
       })
   }
   get f() { return this.viewitemform.controls; }
@@ -55,14 +55,14 @@ export class ViewitemsComponent implements OnInit {
   {
     this.item=new Items();
     this.item.id=this.viewitemform.value["id"];
-    this.item.categoryid=this.viewitemform.value["categoryid"];
-    this.item.subcategoryid=this.viewitemform.value["subcategoryid"];
+     this.item.categoryId=this.viewitemform.value["categoryId"];
+    this.item.subcategoryId=this.viewitemform.value["subcategoryId"];
     this.item.price=Number(this.viewitemform.value["price"]);
-    this.item.itemname=this.viewitemform.value["itemname"];
+    this.item.itemName=this.viewitemform.value["itemName"];
     this.item.description=this.viewitemform.value["description"];
-    this.item.stocknumber=Number(this.viewitemform.value["stocknumber"]);
+    this.item.stockNumber=Number(this.viewitemform.value["stockNumber"]);
     this.item.remarks=this.viewitemform.value["remarks"];
-    this.item.sellerid=this.viewitemform.value["sellerid"];
+     this.item.sellerId=this.viewitemform.value["sellerId"];
     console.log(this.item);
     this.service.UpdateItem(this.item).subscribe(res=>
       {
@@ -76,6 +76,26 @@ export class ViewitemsComponent implements OnInit {
       console.log('Record Deleted');
     },err=>{
       console.log(err);
+    })
+  }
+  Edit(id:string)
+  {
+    this.service.GetById(id).subscribe(res=>{
+      this.item=res;
+      console.log(this.item);
+      this.viewitemform.setValue({
+        id:Number(this.item.id),
+        itemName:this.item.itemName,
+        price:Number(this.item.price),
+        stockNumber:Number(this.item.stockNumber),
+        description:this.item.description,
+        remarks:this.item.remarks,
+        categoryId:Number(this.item.categoryId),
+        subcategoryId:Number(this.item.subcategoryId),
+        sellerId:Number(this.item.sellerId)
+        
+
+      })
     })
   }
 

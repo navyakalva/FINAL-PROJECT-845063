@@ -55,13 +55,13 @@ export class EditItemsComponent implements OnInit {
       console.log(this.item);
       this.edititemform.setValue({
         id:this.item.id,
-        itemname:this.item.itemname,
+        itemname:this.item.itemName,
         price:this.item.price,
-        stocknumber:this.item.stocknumber,
+        stocknumber:this.item.stockNumber,
         description:this.item.description,
         remarks:this.item.remarks,
-        categoryid:this.item.categoryid,
-        subcategoryid:this.item.subcategoryid,
+        categoryid:this.item.categoryId,
+        subcategoryid:this.item.subcategoryId,
 
       })
     })
@@ -70,13 +70,13 @@ export class EditItemsComponent implements OnInit {
   {
     this.item=new Items();
     this.item.id=this.edititemform.value["id"];
-    this.item.itemname=this.edititemform.value["name"];
+    this.item.itemName=this.edititemform.value["name"];
     this.item.price=Number(this.edititemform.value["price"]);
-    this.item.stocknumber=Number(this.edititemform.value["stock"]);
+    this.item.stockNumber=Number(this.edititemform.value["stock"]);
     this.item.description=this.edititemform.value["description"];
     this.item.remarks=this.edititemform.value["remarks"];
-    this.item.categoryid=Number(this.edititemform.value["categoryid"]);
-    this.item.subcategoryid=Number(this.edititemform.value["subcategoryid"]);
+    this.item.categoryId=Number(this.edititemform.value["categoryid"]);
+    this.item.subcategoryId=Number(this.edititemform.value["subcategoryid"]);
     console.log(this.item);
     this.service.UpdateItem(this.item).subscribe(res=>{
       console.log('Record Updated')

@@ -63,14 +63,14 @@ export class AdditemsComponent implements OnInit {
   {
      this.item=new Items();
      this.item.id=Math.round(Math.random()*100);
-     this.item.itemname=this.additemform.value["itemname"];
+     this.item.itemName=this.additemform.value["itemname"];
      this.item.description=this.additemform.value["description"];
      this.item.price=Number(this.additemform.value["price"]);
-     this.item.stocknumber=Number(this.additemform.value["stocknumber"]);
+     this.item.stockNumber=Number(this.additemform.value["stocknumber"]);
      this.item.remarks=this.additemform.value["remarks"];
-     this.item.categoryid=Number(this.additemform.value["categoryid"]);
-     this.item.subcategoryid=Number(this.additemform.value["subcategoryid"]);
-     this.item.sellerid=Number(this.additemform.value["sellerid"]);
+     this.item.categoryId=Number(this.additemform.value["categoryid"]);
+     this.item.subcategoryId=Number(this.additemform.value["subcategoryid"]);
+     this.item.sellerId=Number(this.additemform.value["sellerid"]);
 
      this.service.AddingItem(this.item).subscribe(res=>{
        console.log('Record Added')

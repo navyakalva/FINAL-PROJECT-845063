@@ -26,7 +26,7 @@ export class ItemService
   }
   public GetById(id:string):Observable<Items>
   {
-    return this.http.get<Items>(this.url+'GetById/'+id,Requestheaders)
+    return this.http.get<Items>(this.url+'GetItems/'+id,Requestheaders)
   }
    public UpdateItem(item:Items):Observable<any>
    {

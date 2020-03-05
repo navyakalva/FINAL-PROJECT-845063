@@ -37,6 +37,12 @@ namespace Emart.SellerService.Repositories
 
         public void UpdateItems(Items obj)
         {
+            //Items i = new Items();
+            //i.Price = obj.Price;
+            //i.ItemName = obj.ItemName;
+            //i.StockNumber = obj.StockNumber;
+            //i.Description = obj.Description;
+            //i.Id = obj.Id;
             _context.Items.Update(obj);
             _context.SaveChanges();
         }

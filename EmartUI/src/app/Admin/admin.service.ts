@@ -44,12 +44,9 @@ export class AdminService
      return this.http.delete<any>(this.url+'DeleteSub/'+id,Requestheaders)
     }
    
-    // public UpdateSub(item:SubCategory):Observable<any>
-    // {
-    //   return this.http.put<any>(this.url+'UpdateSub/',JSON.stringify(item),Requestheaders)
-    // }
-    // public DeleteSub(id:string):Observable<any>
-    // {
-    //  return this.http.delete<any>(this.url+'DeleteSub/'+id,Requestheaders)
-    // }
+    public UpdateSub(item:Subcategory):Observable<any>
+    {
+      return this.http.put<any>(this.url+'UpdateSub/',JSON.stringify(item),Requestheaders)
+    }
+    
 }

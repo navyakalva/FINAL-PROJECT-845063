@@ -14,20 +14,19 @@ export class ViewsubComponent implements OnInit {
   submitted=false;
   list:Subcategory[];
   item:Subcategory;
-  clist:Category[];
-  sclist:Subcategory[];
+ 
   constructor(private formbuilder:FormBuilder,private services:ItemService,private service:AdminService)
   { 
-    
-    this.services.GetAllCategories().subscribe(res=>{
-      this.clist=res;
-      console.log(this.clist);
+    this.service.GetAllSub().subscribe(res=>{
+      this.list=res;
+      console.log(this.list);
+    },err=>{
+      console.log(err)
     })
+        
+    }
 
         
-      
-  }
-
   ngOnInit() 
   {
     
@@ -35,6 +34,7 @@ export class ViewsubComponent implements OnInit {
       subcategoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
       subcategoryname:['',Validators.required],
       briefdetails:['',Validators.required],
+      GST:['',Validators.required]
      
       })
   }
@@ -47,14 +47,17 @@ export class ViewsubComponent implements OnInit {
       console.log(err);
     })
   }
-  GetSubCategory()
+  Update()
   {
-    let cid=this.viewform.value["categoryid"];
-    console.log(cid);
-    this.services. GetSub(cid).subscribe(res=>{
-      this.sclist=res;
-      console.log(this.sclist);
+    this.item=new Subcategory();
+    this.item.subcategoryid=this.viewform.value["subcategoryid"];
+    this.item.subcategoryname=this.viewform.value["subcategoryname"];
+    this.item.briefdetails=this.viewform.value["briefdetails"];
+    this.item.GST=this.viewform.value["GST"];
+   
+    console.log(this.item);
+    this.service.UpdateSub(this.item).subscribe(res=>{
+      console.log('Record Updated')
     })
   }
-
 }
