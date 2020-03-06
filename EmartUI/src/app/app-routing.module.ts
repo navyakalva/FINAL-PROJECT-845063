@@ -23,7 +23,7 @@ import { LoginComponent } from './Account/login/login.component';
 import { HomeComponent } from './Account/home/home.component';
 import { ViewsellerprofileComponent } from './Seller/viewsellerprofile/viewsellerprofile.component';
 import { BuyereditprofileComponent } from './Buyer/buyereditprofile/buyereditprofile.component';
-import { SellereditprofileComponent } from './Seller/sellereditprofile/sellereditprofile.component';
+
 import { ViewComponent } from './Admin/view/view.component';
 import { EditItemsComponent } from './Seller/edit-items/edit-items.component';
 import { ViewsubComponent } from './Admin/viewsub/viewsub.component';
@@ -56,7 +56,7 @@ const routes: Routes = [
     {path:'Viewsellerprofile',component:ViewsellerprofileComponent},
     {path:'edititems',component:EditItemsComponent},
     {path:'Viewreports',component:ViewreportsComponent},
-    {path:'Sellereditprofile',component:SellereditprofileComponent}
+   
   ]},
   {path:'home',component:HomeComponent,
   children:[

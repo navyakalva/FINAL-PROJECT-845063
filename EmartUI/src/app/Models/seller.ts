@@ -4,9 +4,9 @@ export class Seller
     username:string;
     password:string;
     companyname:string;
-    GSTIN:string;
-    briefaboutcompany:string;
-    postaladdress:string;
+    gstin:string;
+    briefAboutcompany:string;
+    postalAddress:string;
     website:string;
     emailid:string;
     contactno:string;

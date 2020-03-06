@@ -4,6 +4,7 @@ import {Observable} from "Rxjs";
 import { Seller } from '../Models/seller';
 const Requestheaders={headers:new HttpHeaders({
   'Content-Type':'application/json',
+  'Authorization': 'Bearer '+localStorage.getItem('token')
 })}
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class SellerService {
   url:string='http://localhost:59595/Seller/'
  
   constructor(private http:HttpClient) { }
-  public GetById(id:string):Observable<Seller>
+  public GetById(id:number):Observable<Seller>
   {
     return this.http.get<Seller>(this.url+'GetSellerProfile/'+id,Requestheaders)
   }

@@ -130,6 +130,11 @@ namespace Emart.SellerService.Models
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
+                entity.Property(e => e.Imagepath)
+                    .HasColumnName("imagepath")
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.ItemName)
                     .HasColumnName("item_name")
                     .HasMaxLength(20)

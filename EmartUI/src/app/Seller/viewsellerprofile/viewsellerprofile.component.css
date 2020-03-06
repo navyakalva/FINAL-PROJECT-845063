@@ -7,3 +7,15 @@
     height:800px;
     overflow-y: hidden;
    }
+   #cen
+{
+  float:center;
+}
+.card
+{
+    background-color: rgba(0,0,0,0.5);
+    width:450px;
+}
+label{
+  color:white;
+}

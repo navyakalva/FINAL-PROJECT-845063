@@ -29,7 +29,7 @@ import { RegisterbuyerComponent } from './Account/registerbuyer/registerbuyer.co
 import { HomeComponent } from './Account/home/home.component';
 import { AccountService } from './Account/account.service';
 import { ViewsellerprofileComponent } from './Seller/viewsellerprofile/viewsellerprofile.component';
-import { SellereditprofileComponent } from './Seller/sellereditprofile/sellereditprofile.component';
+
 import { BuyereditprofileComponent } from './Buyer/buyereditprofile/buyereditprofile.component';
 import { ViewComponent } from './Admin/view/view.component';
 import { EditItemsComponent } from './Seller/edit-items/edit-items.component';
@@ -61,7 +61,7 @@ import { ViewsubComponent } from './Admin/viewsub/viewsub.component';
     RegisterbuyerComponent,
     HomeComponent,
     ViewsellerprofileComponent,
-    SellereditprofileComponent,
+   
     BuyereditprofileComponent,
     ViewComponent,
     EditItemsComponent,

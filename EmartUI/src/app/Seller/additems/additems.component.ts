@@ -19,7 +19,7 @@ export class AdditemsComponent implements OnInit {
   item:Items;
   clist:Category[];
   sclist:Subcategory[];
-  
+  image:string;
   constructor(private formbuilder:FormBuilder,private service:ItemService,private route:Router) 
   { 
     this.service.GetAllCategories().subscribe(res=>{
@@ -40,6 +40,7 @@ export class AdditemsComponent implements OnInit {
       categoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
       subcategoryid:['',[Validators.required,Validators.pattern("^[0-9]$")]],
       sellerid:['',Validators.required],
+      imagepath:['']
       })
   }
   get f(){return this.additemform.controls;}
@@ -71,8 +72,9 @@ export class AdditemsComponent implements OnInit {
      this.item.categoryId=Number(this.additemform.value["categoryid"]);
      this.item.subcategoryId=Number(this.additemform.value["subcategoryid"]);
      this.item.sellerId=Number(this.additemform.value["sellerid"]);
-
+     this.item.imagepath=this.image;
      this.service.AddingItem(this.item).subscribe(res=>{
+       alert("added suucessfull")
        console.log('Record Added')
      },err=>{
        console.log(err)
@@ -87,4 +89,7 @@ export class AdditemsComponent implements OnInit {
       console.log(this.sclist);
     })
   }
+  fileEvent(event){
+    this.image = event.target.files[0].name;
+}
 }

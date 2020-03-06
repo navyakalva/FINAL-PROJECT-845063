@@ -5,6 +5,7 @@ import { Category } from '../Models/category';
 import { Subcategory } from '../Models/subcategory';
 const Requestheaders={headers:new HttpHeaders({
   'Content-Type':'application/json',
+  'Authorization': 'Bearer '+localStorage.getItem('token')
 })}
 @Injectable({
   providedIn: 'root'

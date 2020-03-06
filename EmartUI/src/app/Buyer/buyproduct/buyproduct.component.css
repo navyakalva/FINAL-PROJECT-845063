@@ -1,0 +1,9 @@
+.bg{
+    background-image: url("src/assets/images/home2.jpg");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    background-position:relative;
+    background-attachment: fixed;
+    height:auto;
+    overflow-y: hidden;
+ }

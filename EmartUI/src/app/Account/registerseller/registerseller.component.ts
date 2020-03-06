@@ -59,11 +59,11 @@ export class RegistersellerComponent implements OnInit {
      this.item.password=this.sellerform.value["password"];
      this.item.emailid=this.sellerform.value["emailid"];
      this.item.contactno=this.sellerform.value["contactno"];
-     this.item.GSTIN=this.sellerform.value["GSTIN"];
+     this.item.gstin=this.sellerform.value["GSTIN"];
      this.item.companyname=this.sellerform.value["companyname"];
-     this.item.briefaboutcompany=this.sellerform.value["briefaboutcompany"];
+     this.item.briefAboutcompany=this.sellerform.value["briefaboutcompany"];
      this.item.website=this.sellerform.value["website"];
-     this.item.postaladdress=this.sellerform.value["postaladdress"];
+     this.item.postalAddress=this.sellerform.value["postaladdress"];
      console.log(this.item);
      this.service.RegisterSeller(this.item).subscribe(res=>{
        console.log('Record Added')

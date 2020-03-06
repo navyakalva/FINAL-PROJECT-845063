@@ -20,7 +20,7 @@ namespace Emart.AdminService.Models
         public string PostalAddress { get; set; }
         public string Website { get; set; }
         public string Emailid { get; set; }
-        public int Contactno { get; set; }
+        public string Contactno { get; set; }
 
         public virtual ICollection<Items> Items { get; set; }
         public virtual ICollection<PurchaseHistory> PurchaseHistory { get; set; }

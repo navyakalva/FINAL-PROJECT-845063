@@ -1,10 +1,9 @@
 .bg{
-    background-image: url("src/assets/images/buyer.jpg");
+    background-image: url("src/assets/images/cart.jpg");
     background-repeat:no-repeat;
     background-size:100% 100%;
     background-position:relative;
     background-attachment: fixed;
-    height:800px;
-   
+    height:auto;
+    overflow-y: hidden;
    }
-   

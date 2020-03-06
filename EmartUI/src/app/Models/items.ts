@@ -9,5 +9,6 @@ export class Items
     categoryId:Number;
     subcategoryId:Number;
     sellerId:Number;
+    imagepath:string;
 
 }

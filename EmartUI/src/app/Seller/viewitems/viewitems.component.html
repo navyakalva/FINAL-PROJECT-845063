@@ -1,25 +1,29 @@
- <table class="table table-bordered" style="background-color:white">
+<div class="bg">
+ <table class="table table-bordered" style=" background-color: rgba(0,0,0,0.5);color:white;">
         <tr>
-            <th>Item Id</th>
+            <!-- <th>Item Id</th> -->
             <th>Price</th>
             <th>ItemName</th>
             <th>Description</th>
             <th>StockNumber</th>
             <th>Remarks</th>
-            <th>Category Id</th>
-            <th>SubCategory Id</th>
+            <!-- <th>Category Id</th>
+            <th>SubCategory Id</th> -->
+            <th>Image</th>
             <th>Edit</th>
             <th>Delete</th>
+           
          </tr>
         <tr *ngFor="let item of list">
-           <td>{{item.id}}</td>
+           <!-- <td>{{item.id}}</td> -->
            <td>{{item.price}}</td>
            <td>{{item.itemName}}</td>
            <td>{{item.description}}</td>
            <td>{{item.stockNumber}}</td>
            <td>{{item.remarks}}</td>
-           <td>{{item.categoryId}}</td>
-           <td>{{item.subcategoryId}}</td>
+           <!-- <td>{{item.categoryId}}</td>
+           <td>{{item.subcategoryId}}</td> -->
+           <td> <img src='/assets/images/{{item.imagepath}}' style="height:150px; width:150px;"></td>
            <td>
             <button class="btn btn-primary mr-1" (click)="Edit(item.id)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
               Edit
@@ -27,6 +31,7 @@
             <td><button class="btn btn-danger mr-1" (click)="Delete(item.id)" type="button">Delete</button></td>
         </tr>
  </table>
+</div>
  <div class="container">
  
   
@@ -92,5 +97,5 @@
     </div>
     </div>
   </div>
-               </div>
+</div>
             

@@ -14,7 +14,7 @@ namespace Emart.AdminService.Models
         public string Username { get; set; }
         public string Password { get; set; }
         public string Emailid { get; set; }
-        public int Mobileno { get; set; }
+        public string Mobileno { get; set; }
         public DateTime Createddatetime { get; set; }
 
         public virtual ICollection<PurchaseHistory> PurchaseHistory { get; set; }
