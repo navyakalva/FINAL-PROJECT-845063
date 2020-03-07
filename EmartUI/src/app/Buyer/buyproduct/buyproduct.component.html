@@ -1,48 +1,54 @@
-<div class="bg">
-<div class="container">
-    <div class="row" >
-      <div class="col-md-3" *ngFor="let item of list">
-      <div class="card" style="width:250px">
-        <img src='/assets/images/{{item.imagepath}}' style="height:200px; width:200px;">
-        <div class="card-body">
-          <h4 class="card-title">{{item.itemName}}</h4>
-          <h5 class="card-text">ID:{{item.id}}
-             Price:{{item.price}} </h5>
-            
-          <button  type="button" (click)="buy()" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Buy</button>
-          <button  type="button" (click)="Delete(item.id)" class="btn btn-danger">Del</button>
-          
-        </div>
-      </div>
-    </div>
-      </div>
-     </div>
- </div>
-     <!-- <div class="container">
-        <div class="row">
-             
-        <div class="col-md-4" *ngFor="let i of list">
-            <div class="card " style="width:350px;">
-               <img class="card-img-top" src="/assets/images/{{item.image}}" alt="Card image cap"> 
-              <div class="card-body"  > 
-                <h5 class="card-title text-center">Item</h5>
-                <tr *ngFor="let item of list">
-                   <td>
-                  Price: {{item.price}}<br>
-                   Name: {{item.itemName}}<br>
-                   Stock : {{item.stockNumber}}<br>
-                   <button id="bt1" (click)="buy()" >Buy</button><br><br>
-                   <button id="bt2">Add To Cart</button></td>
-                 </tr>
+ <div class="container card col-md-4" >  
+      <div class="card-body" >
+          <h5 class="card-header text-center" style="color: whitesmoke;">Payment Gateway</h5>
+              <form [formGroup]="buyproductform">    
+                <div class="form-group">
+                  <label style="color:white">Item Name</label>
+                  <input type="text" formControlName="itemName" class="form-control" readonly/>
+                </div>
+                <div class="form-group">
+                  <label style="color:white">Number Of Items</label>
+                  <input type="text" formControlName="noofitems" class="form-control" autofocus/>
+                </div>
+                <div class="form-group">
+                  <label style="color:white">Date</label>
+                  <input type="date" formControlName="datetime" class="form-control"/>
+                </div>
+              <div class="form-group">
+                  <label style="color:white">Choose PayMent Mode</label>
+                  <select formControlName="transactiontype">
+                      <option value="credit">Credit Card</option>
+                      <option value="debit">Debit Card</option>
+                      <option value="cod">Cash On Delivery</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label style="color:white">Card Number</label>
+                  <input type="text" formControlName="cardnumber" class="form-control"/>
+                </div>
+                <div class="form-group">
+                  <label style="color:white">CVV</label>
+                  <input type="number" formControlName="CVV" class="form-control" style="width: 30%;"/>
+                </div>
+                <div class="form-group">
+                  <label style="color:white">ExpiryDate</label>
+                  <input type="date" formControlName="ed" class="form-control"/>
+                </div>
+                <div class="form-group">
+                  <label style="color:white">Card Holders Name</label>
+                  <input type="text" formControlName="buyername" class="form-control"/>
+                </div>
+                <div class="form-group">
+                  <label style="color:white">Remarks</label>
+                  <textarea type="text" formControlName="remarks" class="form-control"></textarea>
+                </div>
+              <hr class="my-4 bg-success"/>
+              <div class="form-group">
+                  <div class="text-center">
+                      <button type="submit" class="btn btn-primary mr-1" (click)=" purchase()">Purchase</button>
+                  </div>
               </div>
-              
-              <div class="text-center">
-                <button class="btn btn-primary mr-1">Add</button>
-                <button class="btn btn-primary" (click)="BuyNow(i)">Buy</button>
-            </div>
-            </div>
-            <br>
-           </div>
-            </div>
-          </div>
-</div> -->
+               </form>
+       </div>
+ </div>
+  

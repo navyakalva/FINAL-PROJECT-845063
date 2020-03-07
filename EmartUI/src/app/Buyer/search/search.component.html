@@ -1,52 +1,56 @@
-<style>
-    #id{
-  overflow: hidden;
-  background-color: #e9e9e9;
-}
-.box{
-
-    text-align:center;
-}
-.box1{
- 
-text-align:center;
-}
-tr,td{
-    color: white;
-}
-#bt1{
-    background-color: green;
-}
-#bt2{
-    background-color:orangered;
-}
-  
-
-
-
-</style>
-&nbsp;<br>
+ <br>
+ <div class="container">
+     <div class="offset-4 col-4">
 <form id="g" [formGroup]="searchform" >
     <div class="box">
         <input type="search" id="search" formControlName="itemName" placeholder="Search" />
-    <button type="button" (click)="search()" >search</button>
+    <button type="button" class="btn btn-light" (click)="search()" >search</button>
   </div>
   </form>
-  <section  class="box1" style="align-content: center;">
-    <table class="box" style="background-color:black;">
+  <br><br>
+  <section  class="box1" style="align-content:center;">
+     <div class="card" style="width:200px">
+    <table  class="box" style="background-color:black;">
         <tr *ngFor="let item of list">
             <th>{{item.itemName}}</th>
-            
-         
-           
-        </tr>
+         </tr>
         <tr *ngFor="let item of list">
-           <td> <img src='/assets/images/{{item.imagepath}}' style="height:150px; width:150px;"><br>
+           <td> <img src='/assets/images/{{item.imagepath}}' style="height:150px; width:200px;"><br>
          Price: {{item.price}}<br>
           Name: {{item.itemName}}<br>
           Stock : {{item.stockNumber}}<br>
-          <button id="bt1" (click)="buy()" >Buy</button><br><br>
-          <button id="bt2">Add To Cart</button></td>
+         <br> <button   class="btn btn-primary" (click)="buy(item)" >Buy</button><br><br>
+          <button class="btn btn-primary" (click)="AddToCart(item)">Add To Cart</button></td>
         </tr>
     </table>
+</div>
   </section>
+</div>
+</div>
+ 
+
+
+  <!-- <form [formGroup]="itemform">
+    <input type="search" formControlName="itemname" placeholder="Search" aria-label="Search">
+    <button type="button" class="btn btn-light" (click)="Search()">Search</button>
+</form>
+
+<div class="container">
+<div class="row" >
+  <div class="col-md-3" *ngFor="let item of list">
+  <div class="card" style="width:250px">
+    <img class="img" src="assets/images/{{item.imagename}}" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">{{item.itemname}}</h4>
+      <h5 class="card-text">ID:{{item.id}}
+         Price:{{item.price}} </h5>
+      <button id="b1" type="button" (click)="Buy()" class="btn btn-primary" >BuyItem</button>
+ 
+      <button id="b2" type="button" (click)="Delete(item.itemid)" class="btn btn-primary">AddToCart</button>
+     
+    
+    </div>
+  </div>
+</div>
+  </div>
+ </div> -->

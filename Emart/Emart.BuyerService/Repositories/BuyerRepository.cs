@@ -48,7 +48,24 @@ namespace Emart.BuyerService.Repositories
 
         public List<PurchaseHistory> Transactionshistory(int id)
         {
-            return _context.PurchaseHistory.Where(e => e.Purchaseid == id).ToList();
+            return _context.PurchaseHistory.Where(e => e.BuyerId == id).ToList();
         }
+        public List<Cart> GetCart()
+        {
+            return _context.Cart.ToList();
+        }
+         public void DeleteFromCart(int itemid)
+        {
+            Cart c = _context.Cart.Find(itemid);
+            _context.Remove(c);
+            _context.SaveChanges();
+        }
+
+        public void AddToCart(Cart obj)
+        {
+            _context.Cart.Add(obj);
+            _context.SaveChanges();
+        }
+
     }
 }
