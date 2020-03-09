@@ -41,7 +41,7 @@ export class BuyerService {
   }
   public deletefromcart(id:string):Observable<any>
   {
-     return this.http.delete<any>(this.url+'deletefromcart/',Requestheaders)
+     return this.http.delete<any>(this.url+'Deletefromcart/'+id,Requestheaders)
   }
   public getcart():Observable<any>
   {

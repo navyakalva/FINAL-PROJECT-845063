@@ -16,7 +16,7 @@ namespace Emart.BuyerService.Repositories
         List<Category> GetCategory();
         List<SubCategory> GetSubCategory(int category_id);
         void AddToCart(Cart obj);
-        void DeleteFromCart(int itemid);
+        void DeleteFromCart(int id);
         List<Cart> GetCart();
     }
 }

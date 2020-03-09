@@ -121,9 +121,9 @@ namespace Emart.BuyerService.Controllers
         }
         [HttpDelete]
         [Route("Deletefromcart/{iid}")]
-        public void Delete(int itemid)
+        public void Delete(int id)
         {
-            _repo.DeleteFromCart(itemid);
+            _repo.DeleteFromCart(id);
         }
 
 

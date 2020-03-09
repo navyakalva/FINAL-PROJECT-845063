@@ -54,9 +54,9 @@ namespace Emart.BuyerService.Repositories
         {
             return _context.Cart.ToList();
         }
-         public void DeleteFromCart(int itemid)
+         public void DeleteFromCart(int id)
         {
-            Cart c = _context.Cart.Find(itemid);
+            Cart c = _context.Cart.Find(id);
             _context.Remove(c);
             _context.SaveChanges();
         }

@@ -26,7 +26,7 @@ export class ViewcartComponent implements OnInit {
     console.log(item1);
     this.item=item1;
     localStorage.setItem('item1',JSON.stringify(this.item));
-    this.route.navigateByUrl('/BUYER/BUY PRODUCT');
+    this.route.navigateByUrl('/Buyerlandingpage/Buyproduct');
 }
 Remove(itemid:string)
 {
@@ -39,7 +39,7 @@ this.service.deletefromcart(id).subscribe(res=>{
 }
 Logout(){
 //   localStorage.clear();
- this.route.navigateByUrl('HOME');
+ this.route.navigateByUrl('home');
 }
 
 }
