@@ -27,6 +27,14 @@ namespace Emart.Gateway
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddOcelot(Configuration);
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options =>
+                 options.AllowAnyOrigin()
+                         .AllowAnyMethod()
+                         .AllowAnyHeader()
+                        );
+            });
             services.AddControllers();
         }
 
@@ -41,6 +49,7 @@ namespace Emart.Gateway
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseCors("AllowOrigin");
 
             app.UseEndpoints(endpoints =>
             {

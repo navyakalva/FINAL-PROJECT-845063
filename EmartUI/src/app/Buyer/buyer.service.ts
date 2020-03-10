@@ -39,7 +39,7 @@ export class BuyerService {
   {
      return this.http.post<any>(this.url+'Addtocart',JSON.stringify(cart),Requestheaders)
   }
-  public deletefromcart(id:string):Observable<any>
+  public deletefromcart(id:number):Observable<any>
   {
      return this.http.delete<any>(this.url+'Deletefromcart/'+id,Requestheaders)
   }

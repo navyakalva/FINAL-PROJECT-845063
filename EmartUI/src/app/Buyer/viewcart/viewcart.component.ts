@@ -28,10 +28,9 @@ export class ViewcartComponent implements OnInit {
     localStorage.setItem('item1',JSON.stringify(this.item));
     this.route.navigateByUrl('/Buyerlandingpage/Buyproduct');
 }
-Remove(itemid:string)
+Remove(id:number)
 {
-console.log(itemid);
-let id=itemid;
+console.log(id);
 this.service.deletefromcart(id).subscribe(res=>{
   console.log('Item Removed from Cart');
   alert('Item Removed from Cart');

@@ -24,15 +24,15 @@ namespace Emart.Test
             _repo.SellerRegister(new Seller()
             {
                 Id = 12,
-                Username = "prasu",
-                Password = "chinna",
+                Username = "mani",
+                Password = "mani",
                 Companyname = "infosys",
                 Contactno = "9000326398",
-                Emailid = "prasu@123.com",
+                Emailid = "mani@gmail.com",
                 Gstin = "90",
                 BriefAboutcompany = "good",
                 Website = "www.infosys.com",
-                PostalAddress = "karamchedu"
+                PostalAddress = "tnl"
 
 
             });

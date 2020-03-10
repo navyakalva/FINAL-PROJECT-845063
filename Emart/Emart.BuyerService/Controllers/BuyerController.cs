@@ -120,7 +120,7 @@ namespace Emart.BuyerService.Controllers
             _repo.AddToCart(obj);
         }
         [HttpDelete]
-        [Route("Deletefromcart/{iid}")]
+        [Route("Deletefromcart/{id}")]
         public void Delete(int id)
         {
             _repo.DeleteFromCart(id);

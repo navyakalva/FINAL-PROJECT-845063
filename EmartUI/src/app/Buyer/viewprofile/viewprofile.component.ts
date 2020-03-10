@@ -67,7 +67,7 @@ export class ViewprofileComponent implements OnInit {
   
 
      alert("Success");
-     this.route.navigateByUrl('home/login');
+     //this.route.navigateByUrl('home/login');
     
        }
     

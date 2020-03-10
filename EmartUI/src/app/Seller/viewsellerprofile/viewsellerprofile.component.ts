@@ -69,15 +69,15 @@ export class ViewsellerprofileComponent implements OnInit {
   
         )
 
-  //display form value on success
+   //display form value on success
   
 
      alert("Success");
-     this.route.navigateByUrl('home/login');
+    // this.route.navigateByUrl('home/login');
     
        }
     
-     }
+   }
   
 
 }

@@ -82,5 +82,42 @@ namespace Emart.Test
 
 
         }
+        [Test]
+        [Description("to test add to cart")]
+        public void Addtocart()
+        {
+            _repo.AddToCart(new Cart()
+            {
+                Id = 20,
+                Itemid = 62,
+                Categoryid = 87,
+                Subcategoryid = 37,
+                Itemname = "toys",
+                Price = 20,
+                Description = "games",
+                Stocknumber = 30,
+                Remarks = "super",
+                Sellerid = 1,
+                Buyerid = 4,
+                Imagepath = "games.jpg"
+            });
+
+        }
+        [Test]
+        [Description("to test GetAllItems in Cart")]
+
+        public void TestGetCartItems()
+        {
+            var result = _repo.GetCart();
+            Assert.IsNotNull(result);
+        }
+        [Test]
+        [Description("to test delete cart items")]
+        public void TestDeleteCartItems()
+        {
+            _repo.DeleteFromCart(20);
+          //  var result = _repo.GetCart();
+           // Assert.Null(result);
+        }
     }
 }

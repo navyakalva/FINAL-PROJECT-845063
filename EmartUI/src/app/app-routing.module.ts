@@ -64,7 +64,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'Registerseller',component:RegistersellerComponent},
   ]},
-  {path:'',redirectTo:'login',pathMatch:"full"}
+  {path:'',redirectTo:'home',pathMatch:"full"}
   
 
 ];
