@@ -13,7 +13,7 @@ export class ViewitemsComponent implements OnInit {
   submitted=false;
   list:Items[];
   item:Items;
-  //image:string;
+  imagepath:string;
   constructor(private formbuilder:FormBuilder,private service:ItemService)
   { 
     this.service.GetAllItems().subscribe(res=>{
@@ -37,7 +37,7 @@ export class ViewitemsComponent implements OnInit {
        categoryId:['',[Validators.required,Validators.pattern("^[0-9]$")]],
        subcategoryId:['',[Validators.required,Validators.pattern("^[0-9]$")]],
        sellerId:['',Validators.required],
-      // imagepath:['']
+       imagepath:['']
       })
   }
   get f() { return this.viewitemform.controls; }
@@ -65,7 +65,7 @@ export class ViewitemsComponent implements OnInit {
     this.item.stockNumber=Number(this.viewitemform.value["stockNumber"]);
     this.item.remarks=this.viewitemform.value["remarks"];
       this.item.sellerId=this.viewitemform.value["sellerId"];
-     // this.item.imagepath=this.image;
+      this.item.imagepath=this.imagepath;
     console.log(this.item);
     this.service.UpdateItem(this.item).subscribe(res=>
       {
@@ -96,15 +96,15 @@ export class ViewitemsComponent implements OnInit {
         categoryId:Number(this.item.categoryId),
          subcategoryId:Number(this.item.subcategoryId),
          sellerId:Number(this.item.sellerId),
-        // imagepath:this.item.
+        imagepath:this.item.imagepath
         
 
       })
     })
   }
-//   fileEvent(event){
-//     this.image = event.target.files[0].name;
-// }
+  fileEvent(event){
+    this.imagepath = event.target.files[0].name;
+ }
 
 
 }

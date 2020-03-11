@@ -6,11 +6,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./sellerlandingpage.component.css']
 })
 export class SellerlandingpageComponent implements OnInit {
-  constructor(){}
+  constructor(private route:Router){}
 
 
 
   ngOnInit() {
+  }
+  Logout()
+  {
+    localStorage.clear();
+    this.route.navigateByUrl("home");
   }
 
 }

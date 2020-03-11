@@ -6,10 +6,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./adminlandingpage.component.css']
 })
 export class AdminlandingpageComponent implements OnInit {
-  constructor(){}
+  constructor(private route:Router){}
 
 
   ngOnInit() {
+  }
+  Logout()
+  {
+    localStorage.clear();
+    this.route.navigateByUrl("home");
   }
 
 }

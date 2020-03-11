@@ -27,9 +27,9 @@ export class BuyerService {
   {
     return this.http.get<any>(this.url+'search/'+itemName,Requestheaders)
   }
-  public BuyItem(item:PurchaseHistory ):Observable<PurchaseHistory>
+  public BuyItem(item:PurchaseHistory ):Observable<any>
   {
-    return this.http.post<PurchaseHistory>(this.url+'AddItem',JSON.stringify(item),Requestheaders)
+    return this.http.post<any>(this.url+'AddItem',JSON.stringify(item),Requestheaders)
   }
   public GetItem(id:any):Observable<PurchaseHistory>
   {

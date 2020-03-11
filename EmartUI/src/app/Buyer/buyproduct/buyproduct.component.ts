@@ -68,7 +68,7 @@ export class BuyproductComponent implements OnInit {
      this.transaction.sellerid=Number(this.item.sellerId);
       this.transaction.itemid=Number(this.item.id);
       this.transaction.noofitems=Number(this.buyproductform.value["noofitems"]);
-      this.transaction.buyerid=Number(localStorage.getItem("bid"));
+      this.transaction.buyerid=Number(localStorage.getItem("id"));
       this.transaction.datetime=this.buyproductform.value["datetime"];
       this.transaction.Transactionid=Math.round(Math.random()*1000);
       this.transaction.transactiontype=this.buyproductform.value["transactiontype"];

@@ -8,11 +8,16 @@ import { Router } from '@angular/router';
 export class BuyerlandingpageComponent implements OnInit {
 
 
-  constructor(){}
+  constructor(private route:Router){}
   
   
 
   ngOnInit() {
+  }
+  Logout()
+  {
+    localStorage.clear();
+    this.route.navigateByUrl("home");
   }
 
 }
