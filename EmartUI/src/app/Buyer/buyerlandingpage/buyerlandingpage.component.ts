@@ -6,20 +6,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./buyerlandingpage.component.css']
 })
 export class BuyerlandingpageComponent implements OnInit {
-name:string;
-constructor(){}
-  // constructor( private route:Router) {
-  //   if(sessionStorage.getItem("un"))
-  //   {
-  //   this.name=sessionStorage.getItem("un");
-  //   console.log(this.name);
-  //  }
-  //  if(localStorage.getItem("sid")==null)
-  //   {
-  //     this.route.navigateByUrl('/home/login');
 
-  //   }
-   
+
+  constructor(){}
+  
   
 
   ngOnInit() {
