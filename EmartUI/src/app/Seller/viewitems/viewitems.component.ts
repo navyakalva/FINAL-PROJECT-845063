@@ -13,6 +13,7 @@ export class ViewitemsComponent implements OnInit {
   submitted=false;
   list:Items[];
   item:Items;
+  //image:string;
   constructor(private formbuilder:FormBuilder,private service:ItemService)
   { 
     this.service.GetAllItems().subscribe(res=>{
@@ -33,9 +34,10 @@ export class ViewitemsComponent implements OnInit {
       description:['',Validators.required],
       stockNumber:['',Validators.required],
       remarks:['',Validators.required],
-      categoryId:['',[Validators.required,Validators.pattern("^[0-9]$")]],
-      subcategoryId:['',[Validators.required,Validators.pattern("^[0-9]$")]],
-      sellerId:['',Validators.required],
+       categoryId:['',[Validators.required,Validators.pattern("^[0-9]$")]],
+       subcategoryId:['',[Validators.required,Validators.pattern("^[0-9]$")]],
+       sellerId:['',Validators.required],
+      // imagepath:['']
       })
   }
   get f() { return this.viewitemform.controls; }
@@ -55,14 +57,15 @@ export class ViewitemsComponent implements OnInit {
   {
     this.item=new Items();
     this.item.id=this.viewitemform.value["id"];
-     this.item.categoryId=this.viewitemform.value["categoryId"];
+      this.item.categoryId=this.viewitemform.value["categoryId"];
     this.item.subcategoryId=this.viewitemform.value["subcategoryId"];
     this.item.price=Number(this.viewitemform.value["price"]);
     this.item.itemName=this.viewitemform.value["itemName"];
     this.item.description=this.viewitemform.value["description"];
     this.item.stockNumber=Number(this.viewitemform.value["stockNumber"]);
     this.item.remarks=this.viewitemform.value["remarks"];
-     this.item.sellerId=this.viewitemform.value["sellerId"];
+      this.item.sellerId=this.viewitemform.value["sellerId"];
+     // this.item.imagepath=this.image;
     console.log(this.item);
     this.service.UpdateItem(this.item).subscribe(res=>
       {
@@ -91,13 +94,17 @@ export class ViewitemsComponent implements OnInit {
         description:this.item.description,
         remarks:this.item.remarks,
         categoryId:Number(this.item.categoryId),
-        subcategoryId:Number(this.item.subcategoryId),
-        sellerId:Number(this.item.sellerId)
+         subcategoryId:Number(this.item.subcategoryId),
+         sellerId:Number(this.item.sellerId),
+        // imagepath:this.item.
         
 
       })
     })
   }
+//   fileEvent(event){
+//     this.image = event.target.files[0].name;
+// }
 
 
 }

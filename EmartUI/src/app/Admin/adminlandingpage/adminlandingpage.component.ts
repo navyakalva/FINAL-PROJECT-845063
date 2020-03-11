@@ -6,20 +6,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./adminlandingpage.component.css']
 })
 export class AdminlandingpageComponent implements OnInit {
+  constructor(){}
 
-  name:string;
-  constructor( private route:Router) {
-    if(sessionStorage.getItem("un"))
-    {
-    this.name=sessionStorage.getItem("un");
-    console.log(this.name);
-   }
+//   name:string;
+//   constructor( private route:Router) {
+//     if(sessionStorage.getItem("un"))
+//     {
+//     this.name=sessionStorage.getItem("un");
+//     console.log(this.name);
+//    }
   
-  else
-  {
-    this.route.navigateByUrl("login")
-  }
-}
+//   else
+//   {
+//     this.route.navigateByUrl("home/login")
+//   }
+// }
 
   ngOnInit() {
   }

@@ -75,7 +75,7 @@
                     <label>Remarks</label>
                     <textarea formControlName="remarks" class="form-control"  ></textarea>
                   </div>
-                  <div class="form-group">
+                   <div class="form-group">
                     <label>Category ID</label><br>
                     <input type="text" formControlName="categoryId" class="form-control"  readonly /> </div>
                   <div class="form-group">
@@ -85,7 +85,17 @@
                   <div class="form-group">
                     <label>Seller ID</label><br>
                     <input type="text" formControlName="sellerId" class="form-control"  readonly />
-                  </div>
+                  </div> 
+                   <!-- <div class="form-group">
+                    <label>Image</label>
+                         <input type="file" formControlName="imagepath" (change)="fileEvent($event)">
+                         <div *ngFor="let items of item">
+                            <div>
+                                <img src='assets/images/{{items.image}}' style="height: 150px; width:150px;"><br>
+                                 Name:{{items.itemName}}
+                             </div>
+                          </div> 
+                  </div>   -->
                   <!-- </form> -->
                
                <div class="modal-footer">
