@@ -8,7 +8,13 @@ import { Router } from '@angular/router';
 export class BuyerlandingpageComponent implements OnInit {
 
 
-  constructor(private route:Router){}
+  constructor(private route:Router){
+    if(localStorage.getItem("bid"))
+    {}
+    else{
+      this.route.navigateByUrl("home/login");
+    }
+  }
   
   
 

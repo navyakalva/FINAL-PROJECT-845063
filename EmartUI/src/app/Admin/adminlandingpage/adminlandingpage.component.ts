@@ -6,7 +6,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./adminlandingpage.component.css']
 })
 export class AdminlandingpageComponent implements OnInit {
-  constructor(private route:Router){}
+  constructor(private route:Router){
+    if(localStorage.getItem("Admin"))
+    {}
+    else{
+      this.route.navigateByUrl("home/login");
+    }
+  }
 
 
   ngOnInit() {

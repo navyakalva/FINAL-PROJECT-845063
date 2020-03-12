@@ -71,8 +71,6 @@ this.service.BuyerLogin(username,password).subscribe(res=>{token=res;console.log
   if(token.message=="success"){
     localStorage.setItem('token',token.token)
     localStorage.setItem("bid",token.bid.toString());
-    // localStorage.setItem("username",this.buyer.username);
-    // localStorage.setItem("password",this.buyer.password);
   this.route.navigateByUrl("Buyerlandingpage")
   }
   else{
@@ -87,8 +85,6 @@ this.service.SellerLogin(username,password).subscribe(res=>{token=res;console.lo
   if(token.message=="success"){
     localStorage.setItem('token',token.token)
     localStorage.setItem("sid",token.sid.toString());
-    // localStorage.setItem("username",this.seller.username);
-    // localStorage.setItem("password",this.seller.password);
     this.route.navigateByUrl("Sellerlandingpage")
   }
   else{
@@ -99,6 +95,7 @@ this.service.SellerLogin(username,password).subscribe(res=>{token=res;console.lo
 }
 if(username=="Admin" && password=="admin")
 {
+  localStorage.setItem("Admin",username);
   this.route.navigateByUrl("Adminlandingpage");
 }
 
