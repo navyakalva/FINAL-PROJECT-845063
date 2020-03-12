@@ -33,19 +33,19 @@ export class ViewComponent implements OnInit {
      
       })
   }
-  Update()
-  {
-    this.item=new Category();
-    this.item.categoryid=this.viewform.value["categoryid"];
-    this.item.categoryname=this.viewform.value["categoryname"];
-    this.item.briefdetails=this.viewform.value["briefdetails"];
+  // Update()
+  // {
+  //   this.item=new Category();
+  //   this.item.categoryid=this.viewform.value["categoryid"];
+  //   this.item.categoryname=this.viewform.value["categoryname"];
+  //   this.item.briefdetails=this.viewform.value["briefdetails"];
    
    
-    console.log(this.item);
-    this.service.UpdateCat(this.item).subscribe(res=>{
-      console.log('Record Updated')
-    })
-  }
+  //   console.log(this.item);
+  //   this.service.UpdateCat(this.item).subscribe(res=>{
+  //     console.log('Record Updated')
+  //   })
+  // }
   Delete(id:any)
   {
    

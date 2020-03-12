@@ -47,17 +47,17 @@ export class ViewsubComponent implements OnInit {
       console.log(err);
     })
   }
-  Update()
-  {
-    this.item=new Subcategory();
-    this.item.subcategoryid=this.viewform.value["subcategoryid"];
-    this.item.subcategoryname=this.viewform.value["subcategoryname"];
-    this.item.briefdetails=this.viewform.value["briefdetails"];
-    this.item.GST=this.viewform.value["GST"];
+  // Update()
+  // {
+  //   this.item=new Subcategory();
+  //   this.item.subcategoryid=this.viewform.value["subcategoryid"];
+  //   this.item.subcategoryname=this.viewform.value["subcategoryname"];
+  //   this.item.briefdetails=this.viewform.value["briefdetails"];
+  //   this.item.GST=this.viewform.value["GST"];
    
-    console.log(this.item);
-    this.service.UpdateSub(this.item).subscribe(res=>{
-      console.log('Record Updated')
-    })
-  }
+  //   console.log(this.item);
+  //   this.service.UpdateSub(this.item).subscribe(res=>{
+  //     console.log('Record Updated')
+  //   })
+  // }
 }

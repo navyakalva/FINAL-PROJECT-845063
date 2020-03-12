@@ -69,7 +69,7 @@ Show(){
 AddToCart(item2:Items){
   //let itemlocal=JSON.stringify(localStorage.getItem("item1"));
   console.log(item2);
-  let bid=localStorage.getItem('id');
+  let bid=localStorage.getItem('bid');
  this.cart=new Cart();
  this.cart.id=(Math.round(Math.random()*1000));
  this.cart.itemid=Number(item2.id);
@@ -89,12 +89,7 @@ AddToCart(item2:Items){
    alert('Item has been Added To Cart');
  })
 }
-// SearchByCategory(iid:number){
-//   this.service.GetSubCategory(iid).subscribe(res=>{
-//     this.list=res;
-//     console.log(this.list);
-//   })
-//}
+
 
 }
 

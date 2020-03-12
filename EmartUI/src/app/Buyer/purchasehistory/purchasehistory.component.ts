@@ -10,7 +10,7 @@ import { PurchaseHistory } from 'src/app/Models/purchase-history';
 export class PurchasehistoryComponent implements OnInit {
 list:PurchaseHistory;
   constructor(private service:BuyerService) { 
-    let id=Number(localStorage.getItem("id"))
+    let id=Number(localStorage.getItem("bid"))
     this.service.GetItem(id).subscribe(res=>{this.list=res;
     console.log(this.list);
     })

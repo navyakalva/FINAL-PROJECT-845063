@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { Buyer } from 'src/app/Models/Buyer';
 import { AccountService } from '../account.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-registerbuyer',
   templateUrl: './registerbuyer.component.html',
@@ -13,7 +14,7 @@ export class RegisterbuyerComponent implements OnInit {
  list1:Buyer[];
   item:Buyer;
   
-  constructor(private Formbuilder:FormBuilder,private service:AccountService)
+  constructor(private Formbuilder:FormBuilder,private service:AccountService,private route:Router)
    { 
     
       
@@ -64,6 +65,10 @@ export class RegisterbuyerComponent implements OnInit {
      },err=>{
        console.log(err)
      })
+  }
+  Log()
+  {
+    this.route.navigateByUrl("home/login");
   }
   
 

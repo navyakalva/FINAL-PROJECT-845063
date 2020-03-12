@@ -31,7 +31,7 @@ export class ViewprofileComponent implements OnInit {
   }
   viewprofile()
   {
-        let id=Number(localStorage.getItem("id"))
+        let id=Number(localStorage.getItem("bid"))
       this.service.GetById(id).subscribe(res=>{this.buyer=res;
       console.log(this.buyer)
       this.viewform.setValue({

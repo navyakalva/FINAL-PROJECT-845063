@@ -32,7 +32,7 @@ import { ViewsellerprofileComponent } from './Seller/viewsellerprofile/viewselle
 
 import { BuyereditprofileComponent } from './Buyer/buyereditprofile/buyereditprofile.component';
 import { ViewComponent } from './Admin/view/view.component';
-import { EditItemsComponent } from './Seller/edit-items/edit-items.component';
+
 import { ViewsubComponent } from './Admin/viewsub/viewsub.component';
 
 
@@ -64,7 +64,7 @@ import { ViewsubComponent } from './Admin/viewsub/viewsub.component';
    
     BuyereditprofileComponent,
     ViewComponent,
-    EditItemsComponent,
+    
     ViewsubComponent
   ],
   imports: [

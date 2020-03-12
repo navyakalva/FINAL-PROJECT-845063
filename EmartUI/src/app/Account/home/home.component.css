@@ -11,36 +11,23 @@
 .heading{
   background-color:beige;
 }
-.bg{
-  background-image: url("src/assets/images/home.jpg");
+ .bg{
+  background-image: url("src/assets/images/img4.png");
   background-repeat:no-repeat;
   background-size:cover;
   background-position:relative;
   background-attachment: fixed;
   height:950px;
   
- }
+ } 
  .dropdown-menu
  {
    background-color: black;
  }
 
 
-/* carousel */
-/* #carousel-example-generic {
-  height: 480px;
-  width: 848px;
-} */
+ 
 
-/* .carouselTitle {
-  font-size: 64px;
-  font-weight: 100;
-  color: white;
-  text-shadow: 0 1px 2px #000;
-  position: absolute;
-  bottom: 60px;
-  left: 80px;
-} */
   .header{
   background-color:beige;
   }

@@ -31,7 +31,7 @@ export class ViewsellerprofileComponent implements OnInit {
   }
   viewprofile()
   {
-        let id=Number(localStorage.getItem("id"))
+        let id=Number(localStorage.getItem("sid"))
       this.service.GetById(id).subscribe(res=>{this.seller=res;
       console.log(this.seller)
       this.editform.setValue({

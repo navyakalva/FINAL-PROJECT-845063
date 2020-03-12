@@ -20,9 +20,17 @@ namespace Emart.BuyerService.Controllers
         }
         [HttpPost]
         [Route("AddItem")]
-        public void Buyitem(PurchaseHistory obj)
+        public IActionResult Buyitem(PurchaseHistory obj)
         {
-            _repo.Buyitem(obj);
+            try
+            {
+                _repo.Buyitem(obj);
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                return Content(ex.InnerException.Message);
+            }
         }
 
         [HttpPut]

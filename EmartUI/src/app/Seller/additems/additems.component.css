@@ -1,4 +1,4 @@
-input[type=text],
+/* input[type=text],
 textarea[type=text],
 input[type=Number]{
     width: 80%;
@@ -9,7 +9,7 @@ input[type=Number]{
      box-sizing: border-box; 
     border-radius: 30px;
     
-  }
+  } */
 .card
 {
     background-color: rgba(0,0,0,0.5);

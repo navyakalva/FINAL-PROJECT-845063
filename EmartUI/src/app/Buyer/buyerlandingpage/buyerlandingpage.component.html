@@ -33,15 +33,18 @@
                         <li class="nav-item">
                               <a class="nav-link" [routerLink]="['/Buyerlandingpage/Viewcart']" routerLinkActive="router-link-active" >View Cart</a>
                         </li>
+                  </ul>
+                  <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                               <!-- <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" >Logout</a> -->
-                               <a class="nav-link" (click)="Logout()">LogOut</a> 
+                               <a class="nav-link" id="logout" (click)="Logout()">LogOut</a> 
                         </li>
-                   </ul>
-                     <form class="form-inline my-2 my-lg-0">
+                  </ul>
+                  
+                     <!-- <form class="form-inline my-2 my-lg-0">
                            <input class="form-control input-lg" type="search" id="inputlg" placeholder="Search" aria-label="Search">
                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="font-size:20px">Search</button>
-                      </form>
+                      </form> -->
              </div>
           </nav> 
         </header>

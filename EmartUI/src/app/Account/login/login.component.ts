@@ -70,7 +70,7 @@ export class LoginComponent implements OnInit {
 this.service.BuyerLogin(username,password).subscribe(res=>{token=res;console.log(token)
   if(token.message=="success"){
     localStorage.setItem('token',token.token)
-    localStorage.setItem("id",token.bid.toString());
+    localStorage.setItem("bid",token.bid.toString());
     // localStorage.setItem("username",this.buyer.username);
     // localStorage.setItem("password",this.buyer.password);
   this.route.navigateByUrl("Buyerlandingpage")
@@ -86,7 +86,7 @@ if(role=='seller')
 this.service.SellerLogin(username,password).subscribe(res=>{token=res;console.log(token)
   if(token.message=="success"){
     localStorage.setItem('token',token.token)
-    localStorage.setItem("id",token.sid.toString());
+    localStorage.setItem("sid",token.sid.toString());
     // localStorage.setItem("username",this.seller.username);
     // localStorage.setItem("password",this.seller.password);
     this.route.navigateByUrl("Sellerlandingpage")

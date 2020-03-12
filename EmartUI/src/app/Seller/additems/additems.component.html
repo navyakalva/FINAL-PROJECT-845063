@@ -1,70 +1,60 @@
 <div class=register align="center">
-    <h3 align="center">ADD ITEM</h3>
+    <h3 align="center">ADD ITEMS</h3>
     <div class="container card col-md-4" > 
     <div class="card-body" >
         <form [formGroup]="additemform" (ngSubmit)="onSubmit()" align="center">
-            <table>
-               <tr>
-                <td><label style="color: whitesmoke;">Choose Category</label></td>
+            <!-- <table>
+               <tr> -->
+                <label style="color: whitesmoke; font-size:25px;">Choose Category</label>
                 <!-- <input type="text" formControlName="categoryId" class="form-control" /> -->
-               <td> <select formControlName="categoryid" class="form-control" (change)="GetSubCategory()">
+                <select formControlName="categoryid" class="form-control" (change)="GetSubCategory()">
                      <option *ngFor="let item of clist" value="{{item.categoryId}}">{{item.categoryName}}</option>   
-                </select></td>
-               </tr>
+                </select>
+               
                <br>
-               <tr>
-               <td> <label style="color: whitesmoke;">Choose SubCategory</label></td>
+              
+               <label style="color: whitesmoke;font-size:25px;">Choose SubCategory</label>
                 <!-- <input type="text" formControlName="subcategoryId" class="form-control" /> -->
                 
-                 <td> <select formControlName="subcategoryid" class="form-control">
+                  <select formControlName="subcategoryid" class="form-control">
                     <option *ngFor="let item of sclist" value="{{item.subcategoryId}}">{{item.subcategoryName}}</option>   
-               </select></td>
-               </tr>
+               </select>
               
-                <!-- <tr>
-                    <td><label>Item ID</label></td>
-                    <td><input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
-                    <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
-                        <div *ngIf="f.id.errors.required"></div>
-                    </div></td>
-                </tr> -->
-                <tr>
-                    <td><label>Price</label></td>
-                    <td><input type="Number" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+              
+               
+                    <label style="font-size:25px">Price</label>
+                    <input type="Number" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
                     <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
                         <div *ngIf="f.price.errors.required"></div>
-                    </div></td>
-                </tr>
-                    <tr><td><label>Item Name</label></td>
-                <td><input type="text" formControlName="itemname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.itemname.errors }" />
+                    </div>
+                
+                  <label style="font-size:25px">Item Name</label>
+                <input type="text" formControlName="itemname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.itemname.errors }" />
                 <div *ngIf="submitted && f.itemname.errors" class="invalid-feedback">
                     <div *ngIf="f.itemname.errors.required"></div>
-                </div></td>
-            </tr>
-            <tr>
-                <td><label>Descrption</label></td>
-                <td><textarea type="text" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" ></textarea>
+                </div>
+           
+                <label style="font-size:25px">Descrption</label>
+                <textarea type="text" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" ></textarea>
                 <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
                     <div *ngIf="f.description.errors.required"></div>
-                </div></td>
-            </tr>
-            <tr>
-                <td><label>Stock Number</label></td>
-                <td><input type="Number" formControlName="stocknumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.stocknumber.errors }" />
+                </div>
+           
+           
+                <label style="font-size:25px">Stock Number</label>
+                <input type="Number" formControlName="stocknumber" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.stocknumber.errors }" />
                 <div *ngIf="submitted && f.stocknumber.errors" class="invalid-feedback">
                     <div *ngIf="f.stocknumber.errors.required"></div>
-                </div></td>
-            </tr>
-            <tr>
-                <td><label>Remarks</label></td>
-                <td><textarea type="text" formControlName="remarks" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.remarks.errors }" ></textarea>
+                </div>
+           
+                <label style="font-size:25px">Remarks</label>
+                <textarea type="text" formControlName="remarks" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.remarks.errors }" ></textarea>
                 <div *ngIf="submitted && f.remarks.errors" class="invalid-feedback">
                     <div *ngIf="f.remarks.errors.required"></div>
-                </div></td>
-            </tr>
-            <tr>
-                <td><label>Image</label></td>
-                <td><input type="file" formControlName="imagepath" (change)="fileEvent($event)">
+                </div>
+          
+                <label style="font-size:25px">Image</label><br>
+                <input type="file" formControlName="imagepath" (change)="fileEvent($event)">
                 <br><br>
                 <div *ngFor="let items of item">
                     <div>
@@ -72,37 +62,14 @@
                         Name:{{items.itemName}}
                     </div>
                 </div> 
-            </td>
-            </tr>
+           
             
-            <!-- <tr>
-                <td><label>Category ID</label></td>
-                <td><input type="Number" formControlName="categoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.categoryid.errors }" />
-                <div *ngIf="submitted && f.categoryid.errors" class="invalid-feedback">
-                    <div *ngIf="f.categoryid.errors.required"></div>
-                    <div *ngIf="f.categoryid.errors.pattern"></div>
-                </div></td>
-            </tr> -->
-            <!-- <tr>
-                <td><label>SubCategory ID</label></td>
-                <td><input type="Number" formControlName="subcategoryid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.subcategoryid.errors }" />
-                <div *ngIf="submitted && f.subcategoryid.errors" class="invalid-feedback">
-                    <div *ngIf="f.subcategoryid.errors.required"></div>
-                    <div *ngIf="f.subcategoryid.errors.pattern"></div>
-                </div></td>
-            </tr> -->
-            <!-- <tr>
-                <td><label>Seller ID</label></td>
-                <td><input type="Number" formControlName="sellerid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.sellerid.errors }" />
-                <div *ngIf="submitted && f.sellerid.errors" class="invalid-feedback">
-                    <div *ngIf="f.sellerid.errors.required"></div>
-                </div></td>
-            </tr> -->
+            
                 <div class="text-center">
-                <button class="btn btn-primary mr-1" type="submit" (click)='onSubmit()'>Add</button>
+                <button class="btn btn-primary mr-1" type="submit" (click)='onSubmit()'>Add</button><br><br>
                 <button class="btn btn-primary mr-1" type="reset" (click)='onReset()'>Reset</button>
             </div>
-        </table>
+        
         </form>
     </div>
     </div>

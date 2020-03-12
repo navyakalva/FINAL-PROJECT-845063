@@ -19,3 +19,6 @@
     height:900px;
     overflow-y: hidden;
    }
+   #logout{
+     cursor:pointer;
+   }
