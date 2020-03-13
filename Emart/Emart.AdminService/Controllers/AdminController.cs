@@ -20,15 +20,33 @@ namespace Emart.AdminService.Controllers
         }
         [HttpPost]
         [Route("AddCategory")]
-        public void AddCategory(Category obj)
+        public IActionResult AddCategory(Category obj)
         {
-            _repo.AddCategory(obj);
+            try
+            {
+                _repo.AddCategory(obj);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.InnerException.Message);
+            }
+           
         }
         [HttpPost]
         [Route("AddSubCategory")]
-        public void AddSubCategory(SubCategory obj)
+        public IActionResult AddSubCategory(SubCategory obj)
         {
-            _repo.AddSubCategory(obj);
+            try
+            {
+                _repo.AddSubCategory(obj);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.InnerException.Message);
+            }
+           
         }
         [HttpGet]
         [Route("getcategory/{category_id}")]
@@ -70,27 +88,63 @@ namespace Emart.AdminService.Controllers
         }
         [HttpDelete]
         [Route("DeleteCat/{id}")]
-        public void DeleteCat(int id)
+        public IActionResult DeleteCat(int id)
         {
-            _repo.DeleteCat(id);
+            try
+            {
+                _repo.DeleteCat(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.InnerException.Message);
+            }
+           
         }
         [HttpPut]
         [Route("UpdateCat")]
-        public void UpdateCat(Category obj)
+        public IActionResult UpdateCat(Category obj)
         {
-            _repo.UpdateCat(obj);
+            try
+            {
+                _repo.UpdateCat(obj);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.InnerException.Message);
+            }
+           
         }
         [HttpDelete]
         [Route("DeleteSub/{id}")]
-        public void DeleteSub(int id)
+        public IActionResult DeleteSub(int id)
         {
-            _repo.DeleteSub(id);
+            try
+            {
+                _repo.DeleteSub(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.InnerException.Message);
+            }
+          
         }
         [HttpPut]
         [Route("UpdateSub")]
-        public void UpdateSub(SubCategory obj)
+        public IActionResult UpdateSub(SubCategory obj)
         {
-            _repo.UpdateSub(obj);
+            try
+            {
+                _repo.UpdateSub(obj);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.InnerException.Message);
+            }
+           
         }
     }
 }

@@ -27,7 +27,7 @@ namespace Emart.Test
         [Test]
         public void TestEditBuyerProfile()
         {
-            Buyer buyer = _repo.Getprofile(12);
+            Buyer buyer = _repo.Getprofile(123);
             buyer.Username = "navya";
             buyer.Password = "password";
             buyer.Mobileno = "123344444";
@@ -45,7 +45,7 @@ namespace Emart.Test
         {
             var result = _repo.GetCategory();
             Assert.NotNull(result);
-            Assert.AreEqual(result.Count, 2);
+            Assert.AreEqual(result.Count, 3);
         }
         [Test]
         public void TestGetSubCategory()
@@ -66,12 +66,12 @@ namespace Emart.Test
             _repo.Buyitem(new PurchaseHistory()
             {
 
-                Transactionid = 3,
+                Transactionid = 8,
                 TransactionType = "debit",
                 DateTime=System.DateTime.Now,
                 SellerId=1,
                 BuyerId=2,
-                ItemId=10,
+                ItemId=11,
                 NoOfItems=21,
                 Remarks="good"
 
@@ -88,11 +88,11 @@ namespace Emart.Test
         {
             _repo.AddToCart(new Cart()
             {
-                Id = 20,
-                Itemid = 62,
+                Id = 22,
+                Itemid = 11,
                 Categoryid = 87,
-                Subcategoryid = 37,
-                Itemname = "toys",
+                Subcategoryid = 75,
+                Itemname = "doll",
                 Price = 20,
                 Description = "games",
                 Stocknumber = 30,
@@ -115,7 +115,7 @@ namespace Emart.Test
         [Description("to test delete cart items")]
         public void TestDeleteCartItems()
         {
-            _repo.DeleteFromCart(20);
+            _repo.DeleteFromCart(22);
           //  var result = _repo.GetCart();
            // Assert.Null(result);
         }

@@ -25,7 +25,7 @@ namespace Emart.Test
         public void TestEditProfile()
         {
             Seller seller = _repo.GetSellerProfile(1);
-            seller.Companyname = "Amazon";
+            seller.Companyname = "Cts";
             seller.Contactno = "9581719882";
             _repo.EditProfile(seller);
             Seller seller1 = _repo.GetSellerProfile(1);

@@ -123,15 +123,34 @@ namespace Emart.BuyerService.Controllers
         }
         [HttpPost]
         [Route("Addtocart")]
-        public void Addtocart(Cart obj)
+        public IActionResult Addtocart(Cart obj)
         {
-            _repo.AddToCart(obj);
+            try
+            {
+                _repo.AddToCart(obj);
+                return Ok();
+            }
+            
+            catch (Exception e)
+            {
+                return Ok(e.InnerException.Message);
+            }
         }
         [HttpDelete]
         [Route("Deletefromcart/{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
-            _repo.DeleteFromCart(id);
+            try
+            {
+                _repo.DeleteFromCart(id);
+                return Ok();
+            }
+
+            catch (Exception e)
+            {
+                return Ok(e.InnerException.Message);
+            }
+           
         }
 
 

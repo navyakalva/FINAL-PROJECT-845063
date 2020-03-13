@@ -27,7 +27,7 @@ namespace Emart.Test
         [Description("to test Get Item")]
         public void TestGetItem()
         {
-            var result = _repo.GetItems(40);
+            var result = _repo.GetItems(96);
             Assert.IsNotNull(result);
 
         }
@@ -43,8 +43,8 @@ namespace Emart.Test
         [Description("to test Delete Item")]
         public void TestDeleteItems()
         {
-            _repo.DeleteItems(12);
-            var x = _repo.GetItems(12);
+            _repo.DeleteItems(14);
+            var x = _repo.GetItems(14);
             Assert.Null(x);
         }
         [Test]
@@ -53,10 +53,10 @@ namespace Emart.Test
         {
             _repo.AddItems(new Items()
             {
-                Id = 13,
+                Id = 14,
                 ItemName = "books",
-                CategoryId = 1,
-                SubcategoryId = 1,
+                CategoryId = 12,
+                SubcategoryId = 6,
                 Description = "read",
                 Imagepath = "book.jpg",
                 StockNumber = 8,
@@ -64,7 +64,7 @@ namespace Emart.Test
                 SellerId = 1,
                 Remarks = "good"
             });
-            var result = _repo.GetItems(12);
+            var result = _repo.GetItems(14);
             Assert.NotNull(result);
 
         }
@@ -75,10 +75,10 @@ namespace Emart.Test
         [Description("to test update item")]
         public void TestUpdate()
         {
-            Items i = _repo.GetItems(12);
+            Items i = _repo.GetItems(14);
             i.ItemName = "pencils";
             _repo.UpdateItems(i);
-            Items i1 = _repo.GetItems(12);
+            Items i1 = _repo.GetItems(14);
             Assert.AreSame(i, i1);
 
         }
@@ -87,7 +87,7 @@ namespace Emart.Test
         {
             var result = _repo.GetAllCategories();
             Assert.NotNull(result);
-            Assert.AreEqual(result.Count, 2);
+            Assert.AreEqual(result.Count, 3);
         }
         [Test]
         public void TestGetSubCategory()

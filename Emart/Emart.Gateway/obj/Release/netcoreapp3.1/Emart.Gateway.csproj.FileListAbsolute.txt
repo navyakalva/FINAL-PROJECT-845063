@@ -19,11 +19,11 @@ E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.Gateway\bin\Release\netcoreapp3.1\Ocel
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.csprojAssemblyReference.cache
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\staticwebassets\Emart.Gateway.StaticWebAssets.Manifest.cache
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\staticwebassets\Emart.Gateway.StaticWebAssets.xml
-E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.MvcApplicationPartsAssemblyInfo.cs
-E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.MvcApplicationPartsAssemblyInfo.cache
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.AssemblyInfoInputs.cache
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.AssemblyInfo.cs
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.RazorTargetAssemblyInfo.cache
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.csproj.CopyComplete
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.dll
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.pdb
+E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.MvcApplicationPartsAssemblyInfo.cs
+E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.Gateway\obj\Release\netcoreapp3.1\Emart.Gateway.MvcApplicationPartsAssemblyInfo.cache

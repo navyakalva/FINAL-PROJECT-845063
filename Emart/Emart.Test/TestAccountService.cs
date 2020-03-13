@@ -23,7 +23,7 @@ namespace Emart.Test
         {
             _repo.SellerRegister(new Seller()
             {
-                Id = 12,
+                Id = 65,
                 Username = "mani",
                 Password = "mani",
                 Companyname = "infosys",
@@ -43,10 +43,10 @@ namespace Emart.Test
         {
             _repo.BuyerRegister(new Buyer()
             {
-                Id = 123,
+                Id = 78,
                 Createddatetime = System.DateTime.Now,
-                Username = "sus",
-                Password = "sushmi",
+                Username = "susmitha",
+                Password = "susmitha",
                 Emailid = "sus@gmail.com",
                 Mobileno = "8142070133"
             });
@@ -55,7 +55,7 @@ namespace Emart.Test
         [Description("to check seller login")]
         public void TestSellerLogin()
         {
-            var result = _repo.SellerLogin("seller2", "seller2");
+            var result = _repo.SellerLogin("seller", "seller");
             Assert.IsNotNull(result);
         }
         [Test]

@@ -121,10 +121,10 @@ E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AccountService\bin\Release\netcoreapp3
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AccountService\obj\Release\netcoreapp3.1\Emart.AccountService.csprojAssemblyReference.cache
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AccountService\obj\Release\netcoreapp3.1\staticwebassets\Emart.AccountService.StaticWebAssets.Manifest.cache
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AccountService\obj\Release\netcoreapp3.1\staticwebassets\Emart.AccountService.StaticWebAssets.xml
-E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AccountService\obj\Release\netcoreapp3.1\Emart.AccountService.MvcApplicationPartsAssemblyInfo.cache
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AccountService\obj\Release\netcoreapp3.1\Emart.AccountService.AssemblyInfoInputs.cache
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AccountService\obj\Release\netcoreapp3.1\Emart.AccountService.AssemblyInfo.cs
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AccountService\obj\Release\netcoreapp3.1\Emart.AccountService.RazorTargetAssemblyInfo.cache
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AccountService\obj\Release\netcoreapp3.1\Emart.AccountService.csproj.CopyComplete
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AccountService\obj\Release\netcoreapp3.1\Emart.AccountService.dll
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AccountService\obj\Release\netcoreapp3.1\Emart.AccountService.pdb
+E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AccountService\obj\Release\netcoreapp3.1\Emart.AccountService.MvcApplicationPartsAssemblyInfo.cache

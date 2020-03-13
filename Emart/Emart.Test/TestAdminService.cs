@@ -21,9 +21,9 @@ namespace Emart.Test
         {
             _repo.AddCategory(new Category()
             {
-               CategoryId=12,
-               CategoryName="Grocery",
-               BriefDetails="cooking essentials" 
+               CategoryId=45,
+               CategoryName="Books",
+               BriefDetails="good" 
             });
         }
         [Test]
@@ -32,9 +32,9 @@ namespace Emart.Test
         {
             _repo.AddSubCategory(new SubCategory()
             {
-                SubcategoryId = 12,
-                SubcategoryName = "Pulses",
-                BriefDetails = "cooking essentials",
+                SubcategoryId = 23,
+                SubcategoryName = "Story Books",
+                BriefDetails = "good",
                 Gst=125,
                 CategoryId=12
             });
@@ -44,7 +44,7 @@ namespace Emart.Test
         {
             var result = _repo.GetAllCategories();
             Assert.NotNull(result);
-            Assert.AreEqual(result.Count, 3);
+            Assert.AreEqual(result.Count, 4);
         }
         [Test]
         public void TestGetAllSubCategory()
@@ -57,7 +57,7 @@ namespace Emart.Test
         [Description("to test by id")]
         public void TestGetCategory()
         {
-            var result = _repo.GetById(1);
+            var result = _repo.GetById(45);
             Assert.IsNotNull(result);
 
         }
@@ -65,7 +65,7 @@ namespace Emart.Test
         [Description("to test by id")]
         public void TestGetSubCategory()
         {
-            var result = _repo.GetBySid(1);
+            var result = _repo.GetBySid(23);
             Assert.IsNotNull(result);
 
         }
@@ -73,16 +73,16 @@ namespace Emart.Test
         [Description("to test Delete Category")]
         public void TestDeleteCategory()
         {
-            _repo.DeleteCat(1);
-            var x = _repo.GetById(1);
+            _repo.DeleteCat(45);
+            var x = _repo.GetById(45);
             Assert.Null(x);
         }
         [Test]
         [Description("to test Delete SubCategory")]
         public void TestDeleteSubCategory()
         {
-            _repo.DeleteSub(1);
-            var x = _repo.GetBySid(1);
+            _repo.DeleteSub(23);
+            var x = _repo.GetBySid(23);
             Assert.Null(x);
         }
         [Test]
@@ -100,10 +100,10 @@ namespace Emart.Test
         [Description("to test update SubCategory")]
         public void TestUpdateSubCategory()
         {
-            SubCategory c = _repo.GetBySid(82);
-            c.BriefDetails = "Traditional";
+            SubCategory c = _repo.GetBySid(91);
+            c.BriefDetails = "Cars";
             _repo.UpdateSub(c);
-            SubCategory c1 = _repo.GetBySid(82);
+            SubCategory c1 = _repo.GetBySid(91);
             Assert.AreSame(c, c1);
 
         }

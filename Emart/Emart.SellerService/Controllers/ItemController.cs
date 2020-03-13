@@ -60,15 +60,34 @@ namespace Emart.SellerService.Controllers
         }
         [HttpDelete]
         [Route("Delete/{id}")]
-        public void DeleteItems(int id)
+        public IActionResult DeleteItems(int id)
         {
-            _repo.DeleteItems(id);
+            try
+            {
+                _repo.DeleteItems(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.InnerException.Message);
+            }
+           
         }
         [HttpPut]
         [Route("Update")]
-        public void UpdateItems(Items obj)
+        public IActionResult UpdateItems(Items obj)
         {
-            _repo.UpdateItems(obj);
+
+            try
+            {
+                _repo.UpdateItems(obj);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.InnerException.Message);
+            }
+            
         }
         [HttpGet]
         [Route("GetItems/{id}")]

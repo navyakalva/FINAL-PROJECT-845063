@@ -114,10 +114,10 @@ E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AdminService\bin\Release\netcoreapp3.1
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AdminService\obj\Release\netcoreapp3.1\Emart.AdminService.csprojAssemblyReference.cache
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AdminService\obj\Release\netcoreapp3.1\staticwebassets\Emart.AdminService.StaticWebAssets.Manifest.cache
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AdminService\obj\Release\netcoreapp3.1\staticwebassets\Emart.AdminService.StaticWebAssets.xml
-E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AdminService\obj\Release\netcoreapp3.1\Emart.AdminService.MvcApplicationPartsAssemblyInfo.cache
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AdminService\obj\Release\netcoreapp3.1\Emart.AdminService.AssemblyInfoInputs.cache
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AdminService\obj\Release\netcoreapp3.1\Emart.AdminService.AssemblyInfo.cs
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AdminService\obj\Release\netcoreapp3.1\Emart.AdminService.RazorTargetAssemblyInfo.cache
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AdminService\obj\Release\netcoreapp3.1\Emart.AdminService.csproj.CopyComplete
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AdminService\obj\Release\netcoreapp3.1\Emart.AdminService.dll
 E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AdminService\obj\Release\netcoreapp3.1\Emart.AdminService.pdb
+E:\FINAL-PROJECT-NAVYA-845063\Emart\Emart.AdminService\obj\Release\netcoreapp3.1\Emart.AdminService.MvcApplicationPartsAssemblyInfo.cache
